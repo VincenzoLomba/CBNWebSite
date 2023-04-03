@@ -135,6 +135,7 @@ RUN rm -R /opt/tomcat/webapps/examples
 RUN rm -R /opt/tomcat/webapps/host-manager
 RUN rm -R /opt/tomcat/webapps/manager
 COPY ROOT.war /opt/tomcat/webapps/ROOT.war
+COPY homepage.war /opt/tomcat/webapps/redirect.war
 
 # |> SCRIPT D'AVVIO <|
 # Preparazione dello Script d'avvio di un Container creato a partire da questa immagine.
