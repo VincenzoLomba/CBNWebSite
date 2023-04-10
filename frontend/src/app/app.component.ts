@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { env } from './env';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
-  loadToolbarHeight(): number { return 56; }
+  toolbarHeight(): number { return env.toolbarHeight; }
 }

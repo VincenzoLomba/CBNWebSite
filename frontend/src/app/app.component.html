@@ -1,16 +1,16 @@
 
-<mat-toolbar color="primary" class="classToolbar" #idToolbar>
-  <button mat-icon-button (click)="idSideNav.toggle()" [style.height]="loadToolbarHeight() + 'px'"><mat-icon>menu</mat-icon></button>
+<mat-toolbar color="primary" [style.height]="toolbarHeight() + 'px'">
+    <button mat-icon-button (click)="idSideNav.toggle()"><mat-icon>menu</mat-icon></button>
 </mat-toolbar>
 
-<mat-sidenav-container class="sidenav-container" [style.top]="loadToolbarHeight() + 'px'">
+<mat-sidenav-container class="sidenav-container" [style.top]="toolbarHeight() + 'px'">
 
   <mat-sidenav #idSideNav mode="side">
     <p>Hi from Side Nav</p>
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <p>Hi from HomePage content</p>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 
 </mat-sidenav-container>

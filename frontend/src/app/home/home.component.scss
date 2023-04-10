@@ -1,0 +1,22 @@
+
+.home-image {
+    height: 100%;
+    text-align: center;
+
+    background-image: url("/assets/background.jpg");
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-black {
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

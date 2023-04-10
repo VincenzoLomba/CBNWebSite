@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { DataService } from '../services/data.service';
+import { env } from '../env';
 
 @Component({
   selector: 'app-home',
@@ -7,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  constructor(private dataService: DataService) {};
+
+  public data(): DataService { return this.dataService; }
+  public blackLayerPercentage(): number { return env.homeImageBlackLayerPercentage; }
 }
