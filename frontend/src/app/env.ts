@@ -8,6 +8,6 @@ export const env = {
     routesPath: {
         none: '',
         lottery: 'lotteria',
-        redirect: 'redirect'
+        redirect: 'cbnredirect'
     }
 };
