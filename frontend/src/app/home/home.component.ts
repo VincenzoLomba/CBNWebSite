@@ -13,4 +13,8 @@ export class HomeComponent {
 
   public data(): DataService { return this.dataService; }
   public blackLayerPercentage(): number { return env.homeImageBlackLayerPercentage; }
+
+  public sloganSize(): string {
+    return '42px';
+  }
 }

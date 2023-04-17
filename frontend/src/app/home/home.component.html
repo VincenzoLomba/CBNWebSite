@@ -2,13 +2,14 @@
 <div class="home-image">
     <div class="home-black" [style.background]="'rgba(0, 0, 0, ' + blackLayerPercentage() + ')'">
         <div style="color: white">
-            <h1 style="margin: 0px; font-family: Alkatra">{{data().getSlogan()}}</h1>
-            <p style="font-family: century-gothic, sans-serif">{{data().getTitle()}}</p>
-            <p style="font-family: century-gothic, sans-serif">{{data().getData()}}</p>
+            <h1 style="margin: 0px 22px; font-family: Alkatra" [style.font-size]="sloganSize()">{{data().getSlogan()}}</h1>
+            <p style="margin: 16px 0px; font-family: Urbanist; font-size: 30px">{{data().getTitle()}}</p>
+            <p style="margin: 0px; font-family: Urbanist; font-size: 30px">{{data().getData()}}</p>
         </div>
     </div>
 </div>
 
+<h2 style="margin: 16px">Cos'è il Campus by Night?</h2>
 <p style="line-height: 1.5; margin: 16px;">
     <span *ngFor="let text of data().getDescription().split('<br>')">{{text}}<br></span>
 </p>

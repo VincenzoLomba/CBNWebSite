@@ -1,16 +1,35 @@
 
-<mat-toolbar color="primary" [style.height]="toolbarHeight() + 'px'">
-    <button mat-icon-button (click)="idSideNav.toggle()"><mat-icon>menu</mat-icon></button>
-</mat-toolbar>
+<div *ngIf="!pageLoaded"><mat-progress-bar></mat-progress-bar></div>
 
-<mat-sidenav-container class="sidenav-container" [style.top]="toolbarHeight() + 'px'">
+<div *ngIf="pageLoaded">
 
-  <mat-sidenav #idSideNav mode="side">
-    <p>Hi from Side Nav</p>
-  </mat-sidenav>
+    <mat-toolbar #idToolbar class="toolbar" [style.height]="toolbarHeight()" [style.background]="toolbarColor()" [ngClass]="'mat-elevation-z'+toolbarElevation()">
+        <img src="../assets/logo.png" width="30px" height="30px" (click)="menuButtonClicked()">
+        <span style="flex: 1 1 auto;"></span>
+        <button #menuButton mat-icon-button onclick="this.blur()" (click)="idSidenav.toggle()"><mat-icon>menu</mat-icon></button>
+    </mat-toolbar>
 
-  <mat-sidenav-content>
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
+    <mat-sidenav-container class="sidenav-container" [style.top]="toolbarHeight()">
+      
+      <mat-sidenav #idSidenav [(opened)]="sidenavIsOpen" [style.width]="sideNavWidth()" [autoFocus]="false" mode="over" position="end">
+        <div style="text-align: center;">
+          <p style="margin: 16px 0px; font-family: Urbanist; font-size: 22px; color: #dea22e; font-weight: bold">{{data().getTitle()}}</p>
+          <a [routerLink]="['/' + paths().none]" (click)="idSidenav.close()">
+            <button mat-stroked-button style="margin: 8px 0px; color: black; width: 80%;">Home</button>
+          </a>
+          <br>
+          <a [routerLink]="['/' + paths().lottery]" (click)="idSidenav.close()">
+            <button mat-stroked-button style="margin: 8px 0px; color: black; width: 80%;">Lotteria</button>
+          </a>
+        </div>
+      </mat-sidenav>
+      
+      <mat-sidenav-content>
+        <router-outlet></router-outlet>
+        <app-footer></app-footer>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
 
-</mat-sidenav-container>
+<!-- <img src="../assets/logo.png" width="{{toolbarHeight() - 26}}" height="{{toolbarHeight() - 26}}"> -->
+<!-- <button mat-icon-button (click)="idSideNav.toggle()"><mat-icon svgIcon="cbn" style="font-size:30px; width: 30px; height: 30px;"></mat-icon></button>-->

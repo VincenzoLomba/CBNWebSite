@@ -1,4 +1,10 @@
 
+.toolbar {
+    /* Necessary to ensure class mat-elevation-z* effective */
+    position: relative;
+    z-index: 2;
+}
+
 .sidenav-container {
     position: absolute;
     bottom: 0;
