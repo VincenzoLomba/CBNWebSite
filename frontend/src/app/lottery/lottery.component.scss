@@ -21,24 +21,24 @@ table {
     border-collapse: collapse;
     margin-bottom: 40px;
     border: 1px solid #ddd;
-}
-th {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: left;
-    padding: 10px;
-    background-color: #f2f2f2;
-    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 25px 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
 }
 td {
     font-size: 18px;
-    padding: 10px;
-    border: 1px solid #ddd;
+    padding: 12px 15px;
+}
+tbody tr {
+    border-bottom: 1px solid #dddddd;
 }
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
-tr:hover {
-    background-color: #4f88cd;
+tbody tr:hover {
+    background-color: #de643f;
     color: #fff;
+    border-bottom: 2px solid #4f88cd;
 }
