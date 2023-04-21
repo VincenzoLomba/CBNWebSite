@@ -22,7 +22,7 @@ import { LotteryComponent } from './lottery/lottery.component';
 const appRoutes: Routes = [
   {path: env.routesPath.none, component: HomeComponent},
   {path: env.routesPath.lottery, component: LotteryComponent},
-  {path: env.routesPath.redirect, redirectTo: env.routesPath.lottery},
+  {path: env.routesPath.cbnredirect, redirectTo: env.routesPath.lottery},
   {path: '**', redirectTo: env.routesPath.none}
 ];
 
