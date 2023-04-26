@@ -13,7 +13,7 @@
       
       <mat-sidenav #idSidenav [(opened)]="sidenavIsOpen" [style.width]="sideNavWidth()" [autoFocus]="false" mode="over" position="end">
         <div style="text-align: center;">
-          <p style="margin: 16px 0px; font-family: Urbanist; font-size: 22px; color: #dea22e; font-weight: bold">{{data().getTitle()}}</p>
+          <p style="margin: 16px 0px; font-family: Champion; font-size: 22px; color: #f8ac00; text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black; font-weight: bold">{{data().getTitle()}}</p>
           <a [routerLink]="['/' + paths().none]" (click)="idSidenav.close()">
             <button mat-stroked-button style="margin: 8px 0px; color: black; width: 80%;">Home</button>
           </a>

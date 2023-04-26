@@ -7,7 +7,7 @@ export class DataService {
 
   constructor() {}
 
-  getSlogan(): string { return 'Un\'amicizia per vivere, vivere per un\'amicizia'; }
+  getSlogan(): string { return 'UN\'AMICIZIA PER VIVERE, VIVERE PER UN\'AMICIZIA'; }
 
   getTitle(): string { return 'Campus by Night'; }
 

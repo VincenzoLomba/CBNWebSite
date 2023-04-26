@@ -15,6 +15,6 @@ export class HomeComponent {
   public blackLayerPercentage(): number { return env.homeImageBlackLayerPercentage; }
 
   public sloganSize(): string {
-    return '42px';
+    return '36px';
   }
 }
