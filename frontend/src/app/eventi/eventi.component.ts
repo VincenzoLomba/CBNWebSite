@@ -11,6 +11,7 @@ export class EventiComponent {
 
 //giuro che questo che segue è l'unica cosa che ho chiesto a chat gpt, per capire com'è typescript
 
+/*
 const eventi = document.querySelectorAll('.evento');
 
 eventi.forEach((evento) => {
@@ -23,3 +24,4 @@ eventi.forEach((evento) => {
     img.style.opacity = '1';
   });
 });
+*/
