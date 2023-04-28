@@ -18,6 +18,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { LotteryComponent } from './lottery/lottery.component';
+import { ProgrammaComponent } from './programma/programma.component';
+import { EventiComponent } from './eventi/eventi.component';
+import { MostreComponent } from './mostre/mostre.component';
 
 const appRoutes: Routes = [
   {path: env.routesPath.none, component: HomeComponent},
@@ -31,7 +34,10 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     FooterComponent,
-    LotteryComponent
+    LotteryComponent,
+    ProgrammaComponent,
+    EventiComponent,
+    MostreComponent
   ],
   imports: [
     BrowserModule,
