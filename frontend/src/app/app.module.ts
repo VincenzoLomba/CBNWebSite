@@ -23,6 +23,10 @@ import { EventiComponent } from './eventi/eventi.component';
 import { MostreComponent } from './mostre/mostre.component';
 import { ProgramComponent } from './program/program.component';
 
+/* Google Analytics */
+import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
+
+
 const appRoutes: Routes = [
   {path: env.routesPath.home, component: HomeComponent},
   {path: env.routesPath.lottery, component: LotteryComponent},
@@ -53,7 +57,9 @@ const appRoutes: Routes = [
     MatIconModule,
     MatButtonModule,
     HttpClientModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    NgxGoogleAnalyticsModule.forRoot('G-VP199SVJS3'),
+    NgxGoogleAnalyticsRouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
