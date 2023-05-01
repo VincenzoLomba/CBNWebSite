@@ -11,3 +11,22 @@
     left: 0;
     right: 0;
 }
+
+.sidenav-title {
+    margin: 22px 0px 16px 0px;
+    font-family: Champion;
+    font-size: 20px;
+    color: #f8ac00;
+    text-shadow:
+        -1px 0px 0px black,
+        1px 0px 0px black,
+        0px -1px 0px black,
+        0px 1px 0px black
+    ;
+}
+
+.sidenav-button {
+    margin: 8px 0px 8px 0px;
+    color: black;
+    width: 80%;
+}

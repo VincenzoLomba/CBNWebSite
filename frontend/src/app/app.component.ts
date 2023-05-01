@@ -4,6 +4,7 @@ import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { DataService } from './services/data.service';
 import { MatDrawer, MatSidenav } from '@angular/material/sidenav';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -14,27 +15,30 @@ export class AppComponent implements OnInit {
 
   public pageLoaded: boolean = false;
   public sidenavIsOpen: boolean = false;
-  constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer, private dataService: DataService){};
+  constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer, private dataService: DataService, private router: Router){};
+
+  public mnRoutes: Map<string, string> = new Map<string, string>([
+      ["Home", env.routesPath.home],
+      ["Programma", env.routesPath.program],
+      ["Lotteria", env.routesPath.lottery]
+  ]);
 
   ngOnInit(): void {
     this.matIconRegistry.addSvgIcon( 'cbn', this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/logo.svg') );
     this.pageLoaded = true;
   }
+
   data(): DataService { return this.dataService; }
-  paths() { return env.routesPath; }
   toolbarHeight(): string { return env.toolbarHeight; }
   toolbarColor(): string { return env.toolbarColor; }
   toolbarElevation(): number { return env.toolbarElevation; }
   sideNavWidth(): string { return env.sideNavWidth; }
 
-  menuButtonClicked(): void {
-    console.log('hi');
-    // document.getElementById("menuButton")?.classList.remove('focus');
-  }
+  goToHomePage(): void {}
+  menuRoutesNames(): string[] { return Array.from(this.mnRoutes.keys()); }
+  menuRoutes(): Map<string, string> { return this.mnRoutes; }
 
-  goBack(event: any): void {
-    event.target.focus();
-    console.log('hi');
+  websiteBackgroundColor(): string {
+    return ''; // return this.router.url === '/' + env.routesPath.program ? '#fff1d3' : '';
   }
-
 }

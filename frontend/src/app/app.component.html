@@ -4,7 +4,7 @@
 <div *ngIf="pageLoaded">
 
     <mat-toolbar #idToolbar class="toolbar" [style.height]="toolbarHeight()" [style.background]="toolbarColor()" [ngClass]="'mat-elevation-z'+toolbarElevation()">
-        <img src="../assets/logo.png" width="30px" height="30px" (click)="menuButtonClicked()">
+        <img src="../assets/logo.png" width="30px" height="30px" (click)="goToHomePage()">
         <span style="flex: 1 1 auto;"></span>
         <button #menuButton mat-icon-button onclick="this.blur()" (click)="idSidenav.toggle()"><mat-icon>menu</mat-icon></button>
     </mat-toolbar>
@@ -13,18 +13,19 @@
       
       <mat-sidenav #idSidenav [(opened)]="sidenavIsOpen" [style.width]="sideNavWidth()" [autoFocus]="false" mode="over" position="end">
         <div style="text-align: center;">
-          <p style="margin: 16px 0px; font-family: Champion; font-size: 22px; color: #f8ac00; text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black; font-weight: bold">{{data().getTitle()}}</p>
-          <a [routerLink]="['/' + paths().none]" (click)="idSidenav.close()">
-            <button mat-stroked-button style="margin: 8px 0px; color: black; width: 80%;">Home</button>
-          </a>
-          <br>
-          <a [routerLink]="['/' + paths().lottery]" (click)="idSidenav.close()">
-            <button mat-stroked-button style="margin: 8px 0px; color: black; width: 80%;">Lotteria</button>
-          </a>
+          <!--<p class="sidenav-title">{{data().getTitle()}}</p>-->
+          <div *ngFor="let name of menuRoutesNames(); let i = index">
+            <a [routerLink]="['/' + menuRoutes().get(name)]" (click)="idSidenav.close()">
+              <button mat-stroked-button class="sidenav-button" [style.margin-top]="i == 0 ? '27px' : '8px'">
+                {{name}}
+              </button>
+            </a>
+            <br>
+          </div>
         </div>
       </mat-sidenav>
       
-      <mat-sidenav-content>
+      <mat-sidenav-content [style.background-color]="websiteBackgroundColor()">
         <router-outlet></router-outlet>
         <app-footer></app-footer>
       </mat-sidenav-content>

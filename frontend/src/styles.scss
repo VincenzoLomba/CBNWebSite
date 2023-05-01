@@ -1,4 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
-
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* https://reactgo.com/add-fonts-to-angular */
+@font-face {
+    font-family: "Champion";
+    src: local("Champion"), url(./assets/fonts/championFont.ttf) format("truetype");
+}

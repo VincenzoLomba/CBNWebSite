@@ -7,6 +7,8 @@ export const env = {
     homeImageBlackLayerPercentage: 0.4,
     routesPath: {
         none: '',
+        home: 'home',
+        program: 'programma',
         lottery: 'lotteria',
         cbnredirect: 'cbnredirect'
     }

@@ -21,11 +21,14 @@ import { LotteryComponent } from './lottery/lottery.component';
 import { ProgrammaComponent } from './programma/programma.component';
 import { EventiComponent } from './eventi/eventi.component';
 import { MostreComponent } from './mostre/mostre.component';
+import { ProgramComponent } from './program/program.component';
 
 const appRoutes: Routes = [
-  {path: env.routesPath.none, component: HomeComponent},
+  {path: env.routesPath.home, component: HomeComponent},
   {path: env.routesPath.lottery, component: LotteryComponent},
+  {path: env.routesPath.program, component: ProgramComponent},
   {path: env.routesPath.cbnredirect, redirectTo: env.routesPath.lottery},
+  {path: env.routesPath.none, redirectTo: env.routesPath.home, pathMatch: 'full'},
   {path: '**', redirectTo: env.routesPath.none}
 ];
 
@@ -37,7 +40,8 @@ const appRoutes: Routes = [
     LotteryComponent,
     ProgrammaComponent,
     EventiComponent,
-    MostreComponent
+    MostreComponent,
+    ProgramComponent
   ],
   imports: [
     BrowserModule,
