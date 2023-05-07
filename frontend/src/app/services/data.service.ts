@@ -7,11 +7,11 @@ export class DataService {
 
   constructor() {}
 
-  getSlogan(): string { return 'UN\'AMICIZIA PER VIVERE, VIVERE PER UN\'AMICIZIA'; }
+  getSlogan(): string { return 'UN\'AMICIZIA PER VIVERE,<br>VIVERE PER UN\'AMICIZIA'; }
 
   getTitle(): string { return 'Campus by Night'; }
 
-  getData(): string { return '10-11-12-13 maggio 2023'; }
+  getData(): string { return '10-11-12-13<br>maggio 2023'; }
 
   getDescription(): string {
     return `

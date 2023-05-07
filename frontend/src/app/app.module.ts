@@ -13,6 +13,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 
+/* Google Analytics */
+import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
+
 /* Components */
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -22,15 +25,13 @@ import { ProgrammaComponent } from './programma/programma.component';
 import { EventiComponent } from './eventi/eventi.component';
 import { MostreComponent } from './mostre/mostre.component';
 import { ProgramComponent } from './program/program.component';
-
-/* Google Analytics */
-import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
-
+import { SponsorComponent } from './sponsor/sponsor.component';
 
 const appRoutes: Routes = [
   {path: env.routesPath.home, component: HomeComponent},
   {path: env.routesPath.lottery, component: LotteryComponent},
   {path: env.routesPath.program, component: ProgramComponent},
+  {path: env.routesPath.sponsors, component: SponsorComponent},
   {path: env.routesPath.cbnredirect, redirectTo: env.routesPath.lottery},
   {path: env.routesPath.none, redirectTo: env.routesPath.home, pathMatch: 'full'},
   {path: '**', redirectTo: env.routesPath.none}
@@ -45,7 +46,8 @@ const appRoutes: Routes = [
     ProgrammaComponent,
     EventiComponent,
     MostreComponent,
-    ProgramComponent
+    ProgramComponent,
+    SponsorComponent
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,7 @@ export const env = {
         home: 'home',
         program: 'programma',
         lottery: 'lotteria',
+        sponsors: 'sponsor',
         cbnredirect: 'cbnredirect'
     }
 };
