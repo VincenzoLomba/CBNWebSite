@@ -30,16 +30,11 @@ export class AppComponent implements OnInit {
   }
 
   data(): DataService { return this.dataService; }
-  toolbarHeight(): string { return env.toolbarHeight; }
-  toolbarColor(): string { return env.toolbarColor; }
-  toolbarElevation(): number { return env.toolbarElevation; }
-  sideNavWidth(): string { return env.sideNavWidth; }
+  toolbarHeight(): string { return '56px'; }
 
   goToHomePage(): void {}
   menuRoutesNames(): string[] { return Array.from(this.mnRoutes.keys()); }
   menuRoutes(): Map<string, string> { return this.mnRoutes; }
 
-  websiteBackgroundColor(): string {
-    return ''; // return this.router.url === '/' + env.routesPath.program ? '#fff1d3' : '';
-  }
+  websiteBackgroundColor(): string { return ''; } // { return this.router.url === '/' + env.routesPath.program ? '#fff1d3' : ''; }
 }

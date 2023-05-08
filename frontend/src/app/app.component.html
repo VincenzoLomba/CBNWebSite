@@ -3,7 +3,7 @@
 
 <div *ngIf="pageLoaded">
 
-    <mat-toolbar #idToolbar class="toolbar" [style.height]="toolbarHeight()" [style.background]="toolbarColor()" [ngClass]="'mat-elevation-z'+toolbarElevation()">
+    <mat-toolbar #idToolbar class="toolbar" [style.height]="toolbarHeight()" [ngClass]="'mat-elevation-z3'">
         <img src="../assets/logo.png" width="30px" height="30px" (click)="goToHomePage()">
         <span style="flex: 1 1 auto;"></span>
         <button #menuButton mat-icon-button onclick="this.blur()" (click)="idSidenav.toggle()"><mat-icon>menu</mat-icon></button>
@@ -11,9 +11,9 @@
 
     <mat-sidenav-container class="sidenav-container" [style.top]="toolbarHeight()">
       
-      <mat-sidenav #idSidenav [(opened)]="sidenavIsOpen" [style.width]="sideNavWidth()" [autoFocus]="false" mode="over" position="end">
+      <mat-sidenav #idSidenav class="sidenav" [(opened)]="sidenavIsOpen" [autoFocus]="false" mode="over" position="end">
         <div style="text-align: center;">
-          <p class="sidenav-title">CBN 2023</p><!-- {{data().getTitle()}} -->
+          <p class="sidenav-title">CBN {{data().getData().substring(data().getData().lastIndexOf(' '))}}</p>
           <div *ngFor="let name of menuRoutesNames(); let i = index">
             <a [routerLink]="['/' + menuRoutes().get(name)]" (click)="idSidenav.close()">
               <button mat-stroked-button class="sidenav-button" [style.margin-top]="i == 0 ? '27px' : '8px'">

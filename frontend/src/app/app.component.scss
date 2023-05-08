@@ -3,9 +3,17 @@
     /* Necessary to ensure class mat-elevation-z* effective */
     position: relative;
     z-index: 2;
+
+    height: 56px;
+    background: white;
+}
+
+.sidenav {
+    width: 260px;
 }
 
 .sidenav-container {
+
     position: absolute;
     bottom: 0;
     left: 0;
