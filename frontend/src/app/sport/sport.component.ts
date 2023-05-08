@@ -9,9 +9,7 @@ import { DataService } from '../services/data.service';
 export class SportComponent {
 
   photoLoaded: boolean = false;
-
   constructor(public dataService: DataService){}
-
   public data(): DataService { return this.dataService; }
 
 }

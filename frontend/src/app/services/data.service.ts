@@ -7,29 +7,31 @@ export class DataService {
 
   constructor() {}
 
-  getSlogan(): string { return 'UN\'AMICIZIA PER VIVERE,<br>VIVERE PER UN\'AMICIZIA'; }
-
   getTitle(): string { return 'Campus by Night'; }
 
-  getData(): string { return '10-11-12-13<br>maggio 2023'; }
+  getShort(): string { return 'CBN 2023'; }
+
+  getSlogan(): string { return 'UN\'AMICIZIA PER VIVERE,<br>VIVERE PER UN\'AMICIZIA'; }
+
+  getDateAndPlace(): string { return '10-11-12-13<br>maggio 2023<br>Bologna'; }
 
   getDescription(): string {
     return `
       Il Campus By Night (CBN) è un evento organizzato dagli studenti
       dell’associazione studentesca “Student Office”
-      dell’Alma Mater Studiorum – Università di Bologna,
+      dell’Alma Mater Studiorum Università di Bologna,
       in collaborazione con The Crew. Tramite mostre e conferenze,
       lo scopo dell’evento è di portare all’intera comunità universitaria
       e ai cittadini di Bologna ciò che ci appassiona
       e ci affascina della vita e dello studio.<br>
       Ormai giunto alla sua XX edizione,
       quest’anno il CBN avrà come titolo “Un’amicizia per vivere,
-      vivere per un’amicizia“ e si svolgerà dal 10 al 13 Maggio presso Piazza Scaravilli,
+      vivere per un’amicizia“ e si svolgerà dal 10 al 13 maggio presso <b>Piazza Scaravilli</b> e dintorni,
       nel cuore della zona universitaria bolognese.`
     ;
   }
 
-  getSportAreaTitle(): string { return 'Regolamento<br>CBN Half Court'; }
+  getSportAreaTitle(): string { return 'Regolamento del torneo'; }
 
   getSportRoolBook(): Array<Rule> {
     const response: Array<Rule> = [

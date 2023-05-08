@@ -1,19 +1,31 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
+.home-image {
+    
+    text-align: center;
+
+    background-image: url("/assets/bigliettolotteria.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
+
+.home-black {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 h1 {
     line-height: 1.2;
-    text-align: center;
-    margin-top: 22.78px;
-    margin-bottom: 40px;
+    // text-align: center;
+    // margin-top: 22.78px;
+    // margin-bottom: 100px;
     font-family: Champion;
     letter-spacing: 2px;
     font-size: 34px;
@@ -25,6 +37,21 @@ h1 {
         0px 1px 0px black
     ;
 }
+
+/* Follows auto generated code... */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;

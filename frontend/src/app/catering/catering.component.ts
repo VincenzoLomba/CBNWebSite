@@ -7,6 +7,5 @@ import { Component } from '@angular/core';
 })
 export class CateringComponent {
 
-  photoLoaded: boolean = false;
-
+  menuLoaded: boolean = false;
 }

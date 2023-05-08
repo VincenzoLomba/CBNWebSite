@@ -18,23 +18,23 @@ export class AppComponent implements OnInit {
   constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer, private dataService: DataService, private router: Router){};
 
   public mnRoutes: Map<string, string> = new Map<string, string>([
-      ["Home", env.routesPath.home],
+      ["Home & Mappa", env.routesPath.home],
       ["Programma", env.routesPath.program],
       ["CBN Half Court", env.routesPath.sport],
-      ["Ristorazione", env.routesPath.catering],
+      ["Menu Ristorazione", env.routesPath.catering],
       ["Lotteria", env.routesPath.lottery],
       ["Sponsors", env.routesPath.sponsors]
   ]);
 
   ngOnInit(): void {
-    this.matIconRegistry.addSvgIcon( 'cbn', this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/logo.svg') );
+    this.matIconRegistry.addSvgIcon('gmaps', this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/gmapsicon.svg') );
     this.pageLoaded = true;
   }
 
   data(): DataService { return this.dataService; }
   toolbarHeight(): string { return '56px'; }
 
-  goToHomePage(): void {}
+  goToHomePage(): void { this.router.navigateByUrl(env.routesPath.home); }
   menuRoutesNames(): string[] { return Array.from(this.mnRoutes.keys()); }
   menuRoutes(): Map<string, string> { return this.mnRoutes; }
 

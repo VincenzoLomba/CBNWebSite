@@ -13,7 +13,7 @@
       
       <mat-sidenav #idSidenav class="sidenav" [(opened)]="sidenavIsOpen" [autoFocus]="false" mode="over" position="end">
         <div style="text-align: center;">
-          <p class="sidenav-title">CBN {{data().getData().substring(data().getData().lastIndexOf(' '))}}</p>
+          <p class="sidenav-title">{{data().getShort()}}</p>
           <div *ngFor="let name of menuRoutesNames(); let i = index">
             <a [routerLink]="['/' + menuRoutes().get(name)]" (click)="idSidenav.close()">
               <button mat-stroked-button class="sidenav-button" [style.margin-top]="i == 0 ? '27px' : '8px'">
@@ -21,6 +21,16 @@
               </button>
             </a>
             <br>
+          </div>
+          <div style="position: fixed; bottom: 8px; padding: 20px; left: calc(100% - 260px); right: 0px;">
+            <a  href="http://maps.google.com/?q=Piazza Scaravilli Bologna">
+                <button mat-stroked-button style="height: 66px;">
+                    <mat-icon svgIcon="gmaps"></mat-icon>
+                    CBN 2023<br>
+                    Piazza Scaravilli<br>
+                    Bologna
+                </button>
+            </a>
           </div>
         </div>
       </mat-sidenav>

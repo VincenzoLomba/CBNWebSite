@@ -21,3 +21,22 @@
     justify-content: center;
     align-items: center;
 }
+
+.map {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 700px;
+}
+
+/*
+::ng-deep.map-button {
+    padding: 10px !important;
+    margin: 10px !important;
+    width: 210px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+*/
