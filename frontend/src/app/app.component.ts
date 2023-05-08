@@ -20,6 +20,8 @@ export class AppComponent implements OnInit {
   public mnRoutes: Map<string, string> = new Map<string, string>([
       ["Home", env.routesPath.home],
       ["Programma", env.routesPath.program],
+      ["CBN Half Court", env.routesPath.sport],
+      ["Ristorazione", env.routesPath.catering],
       ["Lotteria", env.routesPath.lottery],
       ["Sponsors", env.routesPath.sponsors]
   ]);

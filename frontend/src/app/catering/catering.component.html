@@ -1,0 +1,5 @@
+<mat-progress-bar *ngIf="!photoLoaded" mode="indeterminate"></mat-progress-bar>
+<div [hidden]="!photoLoaded">
+    <img src="../../assets/menu.jpg" (load)="photoLoaded = true">
+    <app-footer></app-footer>
+</div>

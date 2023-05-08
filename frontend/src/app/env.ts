@@ -6,6 +6,8 @@ export const env = {
         program: 'programma',
         lottery: 'lotteria',
         sponsors: 'sponsor',
+        catering: 'ristorazione',
+        sport: 'sport',
         cbnredirect: 'cbnredirect'
     }
 };

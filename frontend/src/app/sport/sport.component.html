@@ -1,0 +1,18 @@
+<mat-progress-bar *ngIf="!photoLoaded" mode="indeterminate"></mat-progress-bar>
+<div [hidden]="!photoLoaded">
+    <img src="../../assets/sport.png" (load)="photoLoaded = true" [ngClass]="'mat-elevation-z0'">
+    <!--
+    <div style="text-align: center;">
+        <h1 style="margin: 20px; font-size: 24px">
+            <span *ngFor="let text of data().getSportAreaTitle().split('<br>')">{{text}}<br></span>
+        </h1>
+    </div>
+    -->
+    <div *ngFor="let rule of data().getSportRoolBook()">
+        <h2 style="margin: 16px 16px 0px 16px; font-size: 20px;">{{rule.name}}</h2>
+        <p style="line-height: 1.5; margin: 6px 16px 16px 16px">
+            <span *ngFor="let text of rule.body.split('<br>')">{{text}}<br></span>
+        </p>
+    </div>
+    <app-footer></app-footer>
+</div>

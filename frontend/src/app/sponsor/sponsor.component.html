@@ -1,40 +1,12 @@
+<mat-progress-bar *ngIf="sponsorsAreLoading()" mode="indeterminate"></mat-progress-bar>
 <br><br>
-<div style="text-align: center;">
+<div style="text-align: center;" [hidden]="sponsorsAreLoading()">
     <h1 class="title">SPONSORS<br>CBN 2023</h1>
     <br><br>
-    <div>
-        <a href="https://www.teddy.it/it/home/">
-            <img src="../assets/sponsors/1.jpg" style="width: 80%; padding: 8px; margin: 5px 0px; border: 1px solid #555; border-radius: 12px; max-width: 500px;"></a>
-            <br>
-        <a href="https://www.camplus.it/">
-            <img src="../assets/sponsors/2.jpg" style="width: 80%; padding: 8px; margin: 5px 0px; border: 1px solid #555; border-radius: 12px; max-width: 500px;"></a>
-            <br>
-        <a href="https://www.consorziagrariditalia.it/">
-            <img src="../assets/sponsors/3.jpg" style="width: 80%; padding: 8px; margin: 5px 0px; border: 1px solid #555; border-radius: 12px; max-width: 500px;"></a>
-            <br>
-        <a href="https://www.th-resorts.com/">
-            <img src="../assets/sponsors/4.jpg" style="width: 80%; padding: 8px; margin: 5px 0px; border: 1px solid #555; border-radius: 12px; max-width: 500px;"></a>
-            <br>
-        <a href="https://www.agri2000net.com/">
-            <img src="../assets/sponsors/5.jpg" style="width: 80%; padding: 8px; margin: 5px 0px; border: 1px solid #555; border-radius: 12px; max-width: 500px;"></a>
-            <br>
-        <a href="https://www.digiovannisrl.it/">
-            <img src="../assets/sponsors/6.jpg" style="width: 80%; padding: 8px; margin: 5px 0px; border: 1px solid #555; border-radius: 12px; max-width: 500px;"></a>
-            <br>
-        <a href="https://www.illumia.it/">
-            <img src="../assets/sponsors/7.jpg" style="width: 80%; padding: 8px; margin: 5px 0px; border: 1px solid #555; border-radius: 12px; max-width: 500px;"></a>
-            <br>
-        <a href="https://www.apisrl.com/">
-            <img src="../assets/sponsors/8.jpg" style="width: 80%; padding: 8px; margin: 5px 0px; border: 1px solid #555; border-radius: 12px; max-width: 500px;"></a>
-            <br>
-        <a href="https://nextsw.it/">
-            <img src="../assets/sponsors/9.jpg" style="width: 80%; padding: 8px; margin: 5px 0px; border: 1px solid #555; border-radius: 12px; max-width: 500px;"></a>
-            <br>
-        <a href="https://www.niering.it/">
-            <img src="../assets/sponsors/10.jpg" style="width: 80%; padding: 8px; margin: 5px 0px; border: 1px solid #555; border-radius: 12px; max-width: 500px;"></a>
-            <br>
-        <a href="https://www.reabilita.it/">
-            <img src="../assets/sponsors/11.jpg" style="width: 80%; padding: 8px; margin: 5px 0px; border: 1px solid #555; border-radius: 12px; max-width: 500px;"></a>
-            <br>
+    <div *ngFor="let sponsor of getSponsors()">
+        <a href="{{sponsor.url}}">
+            <img src="{{sponsor.source}}" (load)="sponsor.loaded = true" style="width: 80%; padding: 8px; margin: 4px 0px; border: 1px solid #555; border-radius: 12px; max-width: 500px;">
+        </a>
+        <br>
     </div>
 </div>
