@@ -21,9 +21,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { LotteryComponent } from './lottery/lottery.component';
-import { ProgrammaComponent } from './programma/programma.component';
 import { EventiComponent } from './eventi/eventi.component';
-import { MostreComponent } from './mostre/mostre.component';
 import { ProgramComponent } from './program/program.component';
 import { SponsorComponent } from './sponsor/sponsor.component';
 
@@ -43,9 +41,7 @@ const appRoutes: Routes = [
     HomeComponent,
     FooterComponent,
     LotteryComponent,
-    ProgrammaComponent,
     EventiComponent,
-    MostreComponent,
     ProgramComponent,
     SponsorComponent
   ],
