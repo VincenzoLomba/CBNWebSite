@@ -18,7 +18,8 @@ export class SponsorComponent {
     new Sponsor('../assets/sponsors/8.jpg', 'https://www.apisrl.com/'),
     new Sponsor('../assets/sponsors/9.jpg', 'https://nextsw.it/'),
     new Sponsor('../assets/sponsors/10.jpg', 'https://www.niering.it/'),
-    new Sponsor('../assets/sponsors/11.jpg', 'https://www.reabilita.it/')
+    new Sponsor('../assets/sponsors/11.jpg', 'https://www.reabilita.it/'),
+    new Sponsor('../assets/sponsors/12.jpg', 'https://www.yomax.it/')
   ];
 
   getSponsors(): Array<Sponsor> { return this.sponsors; }
