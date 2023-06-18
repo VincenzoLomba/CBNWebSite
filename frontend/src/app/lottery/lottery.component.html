@@ -1,236 +1,61 @@
 <div> <!-- style="display: block; margin-left: auto; margin-right: auto; max-width: 960px;" -->
     <div class="home-image">
         <div class="home-black" [style.background]="'rgba(0, 0, 0, ' + 0.75 + ')'">
-            <h1 style="padding: 26px 20px 20px 20px">LOTTERIA CBN 2023</h1>
+            <h1 style="padding: 26px 20px 20px 20px">LOTTERIA<br>CBN 2023</h1>
         </div>
     </div>
 </div>
 
 <div class="container">
 
+    <!--
     <p style="line-height: 1.5; margin: 4px 10px 22px 10px; color: black;">
         Vieni a trovarci al Campus by Night e partecipa alla lotteria acquistandone i biglietti,
         cogli l'occasione di vincere uno dei 66 premi in palio!<br>
         L'estrazione dei numeri vincenti avrà luogo il 13 maggio alle ore 20:00
         in Piazza Scaravilli a Bologna.
     </p>
-
     <div style="text-align: center; margin-bottom: 34px;">
         <a  href="http://maps.google.com/?q=Piazza Scaravilli Bologna">
-            <button mat-stroked-button> <!-- style="border: 1px solid #327cf0 !important" class="map-button" -->
+            <button mat-stroked-button> <!-- style="border: 1px solid #327cf0 !important" class="map-button" --><!--
                 <mat-icon svgIcon="gmaps"></mat-icon>
                 Vieni al Campus, acquista un biglietto!
             </button>
         </a>
     </div>
+    -->
+
+    <p style="line-height: 1.5; margin: 4px 10px 22px 10px; color: black;">
+        L'estrazione dei numeri vincenti della lotteria del CBN ha avuto luogo il 13 maggio alle ore 20:00
+        in Piazza Scaravilli a Bologna. La lista sottostante riporta i numeri vincenti alla destra dei relativi premi!
+        <br><br>
+        <b>Hai vinto?</b> Puoi ritirare i premi entro il 10 luglio 2023, contattando i numeri 331/9302233 o 334/1258626.
+    </p>
+    <div style="text-align: center; margin-bottom: 34px;">
+        <a [href]="'tel:331/9302233'" style="margin-left: 10px; margin-right: 10px">
+            <button mat-stroked-button matTooltip="331/9302233"> <!-- style="border: 1px solid #327cf0 !important" class="map-button" -->
+                <mat-icon>phone</mat-icon>
+                331/9302233
+            </button>
+        </a>
+        <a [href]="'tel:334/1258626'" style="margin-left: 10px; margin-right: 10px">
+            <button mat-stroked-button matTooltip="334/1258626"> <!-- style="border: 1px solid #327cf0 !important" class="map-button" -->
+                <mat-icon>phone</mat-icon>
+                334/1258626
+            </button>
+        </a>
+    </div>
+    <!-- --> <!-- magic invisible char - do not delete -->
+
+    
 
     <table>
-
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>Scooter Kymco Agility 125cc</td>
+            <tr *ngFor="let prize of getPrizes(); let i = index">
+                <td>{{i+1}}</td>
+                <td>{{prize.name}}</td>
+                <td>{{prize.winningNumber}}</td>
             </tr>
-            <tr>
-                <td>2</td>
-                <td>MacBook Air M1 13”</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Soggiorno di 3 giorni presso Baja Hotels (Costa Smeralda, Sardegna)</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Una settimana per due persone in Sicilia a Castellammare del Golfo (TP)</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Credito dal valore di 300 euro utilizzabile per noleggio veicoli Corrente </td>
-            </tr><tr>
-                <td>6</td>
-                <td>Credito dal valore di 300 euro utilizzabile presso Fini Sport (Bologna)</td>
-            </tr><tr>
-                <td>7</td>
-                <td>1 notte più ingresso al Centro Termale per due persone presso Terme di Saint-Vincent (AO)</td>
-            </tr><tr>
-                <td>8</td>
-                <td>Abbonamento di 6 mesi presso Palestra Sinergy (Bologna)</td>
-            </tr><tr>
-                <td>9</td>
-                <td>Soggiorno due notti presso Agriturismo B&B Casa Matiki (Zminj, Croazia)</td>
-            </tr><tr>
-                <td>10</td>
-                <td>Box di vini offerti da Azienda Agricola Tre Monti</td>
-            </tr><tr>
-                <td>11</td>
-                <td>Ingresso per due persone presso una struttura QC Terme</td>
-            </tr><tr>
-                <td>12</td>
-                <td>Soggiorno di due notti per due persone offerto da Hotel Le Terrazze - Grottammare (AP) </td>
-            </tr><tr>
-                <td>13</td>
-                <td>Soggiorno di due notti per due persone in hotel della catena BeYou Hotels (Roma, Perugia, Rimini, Riccione)</td>
-            </tr><tr>
-                <td>14</td>
-                <td>Buono di 140 euro spendibile presso Stabilimenti Balneari Le Spiagge (Rimini)</td>
-            </tr><tr>
-                <td>15</td>
-                <td>Una notte per due, con aperitivo in Jacuzzi e colazione, presso Open Hotel (Rimini)</td>
-            </tr><tr>
-                <td>16</td>
-                <td>Una notte per due, con colazione presso Hotel Villa Rosa Riviera (Rimini)</td>
-            </tr><tr>
-                <td>17</td>
-                <td>Buono per ombrellone e lettini per 4 giorni presso Bagno Cesare 66 (Riccione)</td>
-            </tr><tr>
-                <td>18</td>
-                <td>Cena per due con menu degustazione presso Ristorante Ciacco (Bologna)</td>
-            </tr><tr>
-                <td>19</td>
-                <td>Buono di 100 euro presso Lella Piade (Rimini)</td>
-            </tr><tr>
-                <td>20</td>
-                <td>Una notte per due e aperitivo presso Hotel Erbavoglio (Rimini) </td>
-            </tr><tr>
-                <td>21</td>
-                <td>Carnet di 11 ingressi gratuiti da utilizzare presso Hyperspace (Bologna)</td>
-            </tr><tr>
-                <td>22</td>
-                <td>Buono cena o pranzo per due spendibile presso Agriturismo Freelandia (Rimini)</td>
-            </tr><tr>
-                <td>23</td>
-                <td>Cena per due persone ristorante Lampino (Acqualagna)</td>
-            </tr><tr>
-                <td>24</td>
-                <td>Cena per due persone presso Agriturismo Orto di Mari (Imola)</td>
-            </tr><tr>
-                <td>25</td>
-                <td>Cassa di 5 bottiglie di vino offerte da Cantina d’Isera</td>
-            </tr><tr>
-                <td>26</td>
-                <td>Cassa di 6 bottiglie di vino offerte da Azienda Agricola Tre Monti</td>
-            </tr><tr>
-                <td>27</td>
-                <td>Cassa di 6 bottiglie di vino offerte da Azienda Agricola Tre Monti</td>
-            </tr><tr>
-                <td>28</td>
-                <td>Cassa di 6 bottiglie di vino offerte da Azienda Agricola Degli Azzoni Avogadro Carradori</td>
-            </tr><tr>
-                <td>29</td>
-                <td>Percorso benessere di 3 ore per due persone presso Aquadirose Wellness Care (Rimini)</td>
-            </tr><tr>
-                <td>30</td>
-                <td>Buono di 54 euro spendibile presso Birrificio Vecchia Orsa </td>
-            </tr><tr>
-                <td>31</td>
-                <td>Buono di 50 euro spendibile presso Cantina Paltrinieri</td>
-            </tr><tr>
-                <td>32</td>
-                <td>Buono di 50 euro per noleggio veicoli Corrente</td>
-            </tr><tr>
-                <td>33</td>
-                <td>Cena per due persone presso Yomi Sushi (Bologna)</td>
-            </tr><tr>
-                <td>34</td>
-                <td>Cena per due persone presso Yomi Sushi (Bologna)</td>
-            </tr><tr>
-                <td>35</td>
-                <td>Buono di 500 euro spendibile presso Tosca Spose</td>
-            </tr><tr>
-                <td>36</td>
-                <td>Cesta di prodotti offerti da Azienda Dolciaria Babbi (Cesena)</td>
-            </tr><tr>
-                <td>37</td>
-                <td>Buono per Igiene Laser Parodontale presso Studio Dentistico Romeo (Bologna)</td>
-            </tr><tr>
-                <td>38</td>
-                <td>Buono di 50 euro spendibile presso Patron Buono Libreria Universitaria</td>
-            </tr><tr>
-                <td>39</td>
-                <td>Degustazione e visita guidata per due presso Birrificio Vecchia Orsa </td>
-            </tr><tr>
-                <td>40</td>
-                <td>Buono di 30 euro utilizzabile presso ristorante Scalinatella (Bologna)</td>
-            </tr><tr>
-                <td>41</td>
-                <td>Scatola di cioccolatini offerta da Roccati Cioccolato</td>
-            </tr><tr>
-                <td>42</td>
-                <td>Pranzo o cena per due persone presso Emporio Gastronomico (Rimini)</td>
-            </tr><tr>
-                <td>43</td>
-                <td>Buono da 50 euro spendibile presso Azienda Agricola Frontali (Rimini)</td>
-            </tr><tr>
-                <td>44</td>
-                <td>Cesta di prodotti offerti da Molino Benini (Ravenna)</td>
-            </tr><tr>
-                <td>45</td>
-                <td>Prodotto offerto da Blu Bologna</td>
-            </tr><tr>
-                <td>46</td>
-                <td>Kit di dermocosmesi offerta da Terme San Petronio</td>
-            </tr><tr>
-                <td>47</td>
-                <td>Set di creme solari e trucchi offerto da Farmacia San Giovanni (Crespellano) </td>
-            </tr><tr>
-                <td>48</td>
-                <td>Tris di creme spalmabili dal valore di 30 euro offerto da Azienda Dolciaria Babbi</td>
-            </tr><tr>
-                <td>49</td>
-                <td>Buono 40% di sconto su lenti oftalmiche presso Ottica Massarenti (Bologna)</td>
-            </tr><tr>
-                <td>50</td>
-                <td>Buono per 1 kg di gelato presso Gelateria Costa39 (Bologna)</td>
-            </tr><tr>
-                <td>51</td>
-                <td>Buono per 10 pizze presso Pizza Irnerio (Bologna)</td>
-            </tr><tr>
-                <td>52</td>
-                <td>Due cornici d’argento offerte da Gioielleria Serrazanetti (Bologna)</td>
-            </tr><tr>
-                <td>53</td>
-                <td>Buono da 5 pizze Pizza Irnerio (Bologna)</td>
-            </tr><tr>
-                <td>54</td>
-                <td>Set di collane Boutique Anita Calandrini</td>
-            </tr><tr>
-                <td>55</td>
-                <td>Pochette e portachiavi Pelletteria Campora</td>
-            </tr><tr>
-                <td>56</td>
-                <td>Pochette e portachiavi Pelletteria Campora</td>
-            </tr><tr>
-                <td>57</td>
-                <td>Portadocumenti e portachiavi Pelletteria Campora</td>
-            </tr><tr>
-                <td>58</td>
-                <td>Portachiavi Pelletteria Campora</td>
-            </tr><tr>
-                <td>59</td>
-                <td>Buono per 600 grammi di gelato offerto da LeccoLecco (Bologna)</td>
-            </tr><tr>
-                <td>60</td>
-                <td>Buono per 600 grammi di gelato offerto da LeccoLecco (Bologna)</td>
-            </tr><tr>
-                <td>61</td>
-                <td>Pranzo o cena omaggio presso Sfarinà (Bologna)</td>
-            </tr><tr>
-                <td>62</td>
-                <td>Aperitivo completo per due persone offerto da Caffetteria Neri (Bologna) </td>
-            </tr><tr>
-                <td>63</td>
-                <td>Set di portafogli offerti da Valigeria Cremonini (Bologna)</td>
-            </tr><tr>
-                <td>64</td>
-                <td>Buono presso Bar Maggiolino (Bologna)</td>
-            </tr><tr>
-                <td>65</td>
-                <td>10 colazioni omaggio Caffè degli Orefici (Bologna)</td>
-            </tr><tr>
-                <td>66</td>
-                <td>Mirabilandia 10 coupon con ingresso gratuito ogni due paganti</td>
-            </tr>
-            <!-- continuare con gli altri premi -->
         </tbody>
     </table>
 </div>

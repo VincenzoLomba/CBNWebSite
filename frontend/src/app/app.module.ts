@@ -12,6 +12,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 /* Google Analytics */
 import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
@@ -61,7 +62,8 @@ const appRoutes: Routes = [
     HttpClientModule,
     MatProgressBarModule,
     NgxGoogleAnalyticsModule.forRoot('G-VP199SVJS3'),
-    NgxGoogleAnalyticsRouterModule
+    NgxGoogleAnalyticsRouterModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
