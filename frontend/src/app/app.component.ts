@@ -28,6 +28,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.matIconRegistry.addSvgIcon('gmaps', this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/gmapsicon.svg') );
+    this.matIconRegistry.addSvgIcon('spotify', this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/spotifyicon.svg') );
     this.pageLoaded = true;
   }
 
