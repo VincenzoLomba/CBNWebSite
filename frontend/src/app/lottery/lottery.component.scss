@@ -2,7 +2,7 @@
     
     text-align: center;
 
-    background-image: url("/assets/bigliettolotteria.jpg");
+    background-image: url("/assets/background24.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -26,16 +26,18 @@ h1 {
     // text-align: center;
     // margin-top: 22.78px;
     // margin-bottom: 100px;
-    font-family: Champion;
+    font-family: Aesthetic;
     letter-spacing: 2px;
     font-size: 34px;
-    color: #de643f;
+    color: white; //#de643f;
+    /*
     text-shadow:
         -1px 0px 0px black,
         1px 0px 0px black,
         0px -1px 0px black,
         0px 1px 0px black
     ;
+    */
 }
 
 /* Follows auto generated code... */

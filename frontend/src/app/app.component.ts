@@ -19,11 +19,14 @@ export class AppComponent implements OnInit {
 
   public mnRoutes: Map<string, string> = new Map<string, string>([
       ["Home & Mappa", env.routesPath.home],
+      /*
       ["Programma", env.routesPath.program],
       ["CBN Half Court", env.routesPath.sport],
       ["Menu Ristorazione", env.routesPath.catering],
-      ["Lotteria", env.routesPath.lottery],
+      */
+      ["Lotteria", env.routesPath.lottery]/*,
       ["Sponsors", env.routesPath.sponsors]
+      */
   ]);
 
   ngOnInit(): void {

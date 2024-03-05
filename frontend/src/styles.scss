@@ -3,8 +3,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 /* https://reactgo.com/add-fonts-to-angular */
 @font-face {
-    font-family: "Champion";
-    src: local("Champion"), url(./assets/fonts/championFont.ttf) format("truetype");
+    font-family: "Aghita";
+    src: local("Aghita"), url(./assets/fonts/Aghita.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Aesthetic";
+    src: local("Aesthetic"), url(./assets/fonts/Aesthetic-Regular.ttf) format("truetype");
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

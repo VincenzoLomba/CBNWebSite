@@ -1,6 +1,6 @@
 <div> <!-- style="display: block; margin-left: auto; margin-right: auto; max-width: 960px;" -->
     <div class="home-image">
-        <div class="home-black" [style.background]="'rgba(0, 0, 0, ' + 0.75 + ')'">
+        <div class="home-black" [style.background]="'rgba(0, 0, 0, ' + 0.42 + ')'">
             <h1 style="padding: 26px 20px 20px 20px">LOTTERIA<br>CBN 2023</h1>
         </div>
     </div>
@@ -8,7 +8,6 @@
 
 <div class="container">
 
-    <!--
     <p style="line-height: 1.5; margin: 4px 10px 22px 10px; color: black;">
         Vieni a trovarci al Campus by Night e partecipa alla lotteria acquistandone i biglietti,
         cogli l'occasione di vincere uno dei 66 premi in palio!<br>
@@ -17,14 +16,14 @@
     </p>
     <div style="text-align: center; margin-bottom: 34px;">
         <a  href="http://maps.google.com/?q=Piazza Scaravilli Bologna">
-            <button mat-stroked-button> <!-- style="border: 1px solid #327cf0 !important" class="map-button" --><!--
+            <button mat-stroked-button> <!-- style="border: 1px solid #327cf0 !important" class="map-button" -->
                 <mat-icon svgIcon="gmaps"></mat-icon>
                 Vieni al Campus, acquista un biglietto!
             </button>
         </a>
     </div>
-    -->
 
+    <!--
     <p style="line-height: 1.5; margin: 4px 10px 22px 10px; color: black;">
         L'estrazione dei numeri vincenti della lotteria del CBN ha avuto luogo il 13 maggio alle ore 20:00
         in Piazza Scaravilli a Bologna. La lista sottostante riporta i numeri vincenti alla destra dei relativi premi!
@@ -33,28 +32,27 @@
     </p>
     <div style="text-align: center; margin-bottom: 34px;">
         <a [href]="'tel:331/9302233'" style="margin-left: 10px; margin-right: 10px">
-            <button mat-stroked-button matTooltip="331/9302233"> <!-- style="border: 1px solid #327cf0 !important" class="map-button" -->
+            <button mat-stroked-button matTooltip="331/9302233"> <!-- style="border: 1px solid #327cf0 !important" class="map-button" --><!--
                 <mat-icon>phone</mat-icon>
                 331/9302233
             </button>
         </a>
         <a [href]="'tel:334/1258626'" style="margin-left: 10px; margin-right: 10px">
-            <button mat-stroked-button matTooltip="334/1258626"> <!-- style="border: 1px solid #327cf0 !important" class="map-button" -->
+            <button mat-stroked-button matTooltip="334/1258626"> <!-- style="border: 1px solid #327cf0 !important" class="map-button" --><!--
                 <mat-icon>phone</mat-icon>
                 334/1258626
             </button>
         </a>
     </div>
+    -->
     <!-- --> <!-- magic invisible char - do not delete -->
-
-    
 
     <table>
         <tbody>
             <tr *ngFor="let prize of getPrizes(); let i = index">
                 <td>{{i+1}}</td>
                 <td>{{prize.name}}</td>
-                <td>{{prize.winningNumber}}</td>
+                <td *ngIf="prize.winningNumber != null">{{prize.winningNumber}}</td>
             </tr>
         </tbody>
     </table>

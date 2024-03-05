@@ -4,7 +4,7 @@
 <div *ngIf="pageLoaded">
 
     <mat-toolbar #idToolbar class="toolbar" [style.height]="toolbarHeight()" [ngClass]="'mat-elevation-z3'">
-        <img src="../assets/logo.png" width="30px" height="30px" (click)="goToHomePage()">
+        <img src="../assets/logo24.png" width="30px" height="30px" (click)="goToHomePage()">
         <span style="flex: 1 1 auto;"></span>
         <button #menuButton mat-icon-button onclick="this.blur()" (click)="idSidenav.toggle()"><mat-icon>menu</mat-icon></button>
     </mat-toolbar>
@@ -24,16 +24,17 @@
           </div>
           <div style="position: fixed; bottom: 8px; padding: 20px; left: calc(100% - 260px); right: 0px;">
             <a  href="https://open.spotify.com/show/6oec6HSy5WyYPP1KyXat2O?si=mnE4OByRS2iy5BwSGhLG-w">
-              <button mat-stroked-button style="height: 56px; margin-bottom: 12px;">
+              <button mat-stroked-button style="height: 66px; margin-bottom: 12px; font-size: 13px;">
                   <mat-icon svgIcon="spotify"></mat-icon>
                   CBN 2023<br>
+                  Previous Edition<br>
                   Spotify Podcast
               </button>
           </a>
             <a  href="http://maps.google.com/?q=Piazza Scaravilli Bologna">
-                <button mat-stroked-button style="height: 66px;">
+                <button mat-stroked-button style="height: 66px; font-size: 13px;">
                     <mat-icon svgIcon="gmaps"></mat-icon>
-                    CBN 2023<br>
+                    CBN 2024<br>
                     Piazza Scaravilli<br>
                     Bologna
                 </button>
