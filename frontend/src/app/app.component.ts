@@ -6,6 +6,9 @@ import { DataService } from './services/data.service';
 import { MatDrawer, MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
 
+const dataStructure = new Map();
+
+console.log(dataStructure);
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -28,6 +31,11 @@ export class AppComponent implements OnInit {
       ["Sponsors", env.routesPath.sponsors]
       */
   ]);
+  
+  public KEYandICON: Map<string, string> = new Map<string, string>([
+    ["Home & Mappa", "home"],
+    ["Lotteria", "casino"]
+  ]);
 
   ngOnInit(): void {
     this.matIconRegistry.addSvgIcon('gmaps', this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/gmapsicon.svg') );
@@ -41,6 +49,8 @@ export class AppComponent implements OnInit {
   goToHomePage(): void { this.router.navigateByUrl(env.routesPath.home); }
   menuRoutesNames(): string[] { return Array.from(this.mnRoutes.keys()); }
   menuRoutes(): Map<string, string> { return this.mnRoutes; }
+  getIcons(): string[] {return Array.from(this.KEYandICON.values());}
 
   websiteBackgroundColor(): string { return ''; } // { return this.router.url === '/' + env.routesPath.program ? '#fff1d3' : ''; }
 }
+
