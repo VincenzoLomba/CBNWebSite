@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
       this.formattedTime =
         this.formatTimeUnit(this.days) + ' giorni ' +
         this.formatTimeUnit(hours) + ' ore ' +
-        this.formatTimeUnit(minutes) + ' minuti e  ' +
+        this.formatTimeUnit(minutes) + ' minuti e ' +
         this.formatTimeUnit(seconds)+ ' secondi';
     } else {
       clearInterval(this.countdownInterval);
