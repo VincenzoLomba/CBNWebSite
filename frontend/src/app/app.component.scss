@@ -1,23 +1,24 @@
 
+$toolbar-height: 56px;
+
 .toolbar {
     /* Necessary to ensure class mat-elevation-z* effective */
     position: relative;
     z-index: 2;
-
-    height: 56px;
+    /* Additional */
     background: white;
+    height: $toolbar-height;
 }
 
-.sidenav {
-    width: 260px;
-}
+.sidenav { width: 260px; }
 
 .sidenav-container {
-
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
+    
+    top: $toolbar-height;
 }
 
 .sidenav-title {
