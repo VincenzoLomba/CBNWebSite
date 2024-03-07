@@ -32,10 +32,10 @@ export class AppComponent implements OnInit {
       */
   ]);
   
-  public KEYandICON: Map<string, string> = new Map<string, string>([
+  /*public KEYandICON: Map<string, string> = new Map<string, string>([
     ["Home & Mappa", "home"],
     ["Lotteria", "casino"]
-  ]);
+  ]);*/
 
   ngOnInit(): void {
     this.matIconRegistry.addSvgIcon('gmaps', this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/gmapsicon.svg') );
@@ -49,8 +49,8 @@ export class AppComponent implements OnInit {
   goToHomePage(): void { this.router.navigateByUrl(env.routesPath.home); }
   menuRoutesNames(): string[] { return Array.from(this.mnRoutes.keys()); }
   menuRoutes(): Map<string, string> { return this.mnRoutes; }
-  getIcons(): string[] {return Array.from(this.KEYandICON.values());}
+  //getIcons(): string[] {return Array.from(this.KEYandICON.values());}
 
   websiteBackgroundColor(): string { return ''; } // { return this.router.url === '/' + env.routesPath.program ? '#fff1d3' : ''; }
+  ICONS: string[] = ['home', 'casino'];
 }
-

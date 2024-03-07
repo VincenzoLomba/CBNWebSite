@@ -17,8 +17,10 @@
           <div *ngFor="let name of menuRoutesNames(); let i = index"> 
             <a [routerLink]="['/' + menuRoutes().get(name)]" (click)="idSidenav.close()">
               <button mat-stroked-button class="sidenav-button" [style.margin-top]="i == 0 ? '27px' : '8px'">
-                <span class="material-icons">home</span>
-                {{name}}
+
+                <span class="material-icons">{{ ICONS[i] }}</span>
+
+                    {{name}}
               </button>
             </a>
             <br>
