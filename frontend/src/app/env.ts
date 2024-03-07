@@ -1,5 +1,4 @@
 export const env = {
-
     routesPath: {
         none: '',
         home: 'home',
@@ -8,6 +7,7 @@ export const env = {
         sponsors: 'sponsor',
         catering: 'ristorazione',
         sport: 'sport',
+        immagini: 'immagini',
         cbnredirect: 'cbnredirect'
     }
 };

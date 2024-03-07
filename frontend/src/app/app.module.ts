@@ -26,6 +26,7 @@ import { ProgramComponent } from './program/program.component';
 import { SponsorComponent } from './sponsor/sponsor.component';
 import { SportComponent } from './sport/sport.component';
 import { CateringComponent } from './catering/catering.component';
+import { ImmaginiComponent } from './immagini/immagini.component';
 
 const appRoutes: Routes = [
   {path: env.routesPath.home, component: HomeComponent},
@@ -34,6 +35,7 @@ const appRoutes: Routes = [
   {path: env.routesPath.catering, component: CateringComponent},
   {path: env.routesPath.sport, component: SportComponent},
   {path: env.routesPath.sponsors, component: SponsorComponent},
+  {path: env.routesPath.immagini, component: ImmaginiComponent},
   {path: env.routesPath.cbnredirect, redirectTo: env.routesPath.lottery},
   {path: env.routesPath.none, redirectTo: env.routesPath.home, pathMatch: 'full'},
   {path: '**', redirectTo: env.routesPath.none}
@@ -48,7 +50,8 @@ const appRoutes: Routes = [
     ProgramComponent,
     SponsorComponent,
     SportComponent,
-    CateringComponent
+    CateringComponent,
+    ImmaginiComponent
   ],
   imports: [
     BrowserModule,
