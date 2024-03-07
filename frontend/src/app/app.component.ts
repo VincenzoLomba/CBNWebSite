@@ -27,9 +27,11 @@ export class AppComponent implements OnInit {
       ["CBN Half Court", env.routesPath.sport],
       ["Menu Ristorazione", env.routesPath.catering],
       */
-      ["Lotteria", env.routesPath.lottery]/*,
+      ["Lotteria", env.routesPath.lottery],
+      /*,
       ["Sponsors", env.routesPath.sponsors]
       */
+      ["Galleria", env.routesPath.immagini]
   ]);
   
   /*public KEYandICON: Map<string, string> = new Map<string, string>([
@@ -52,6 +54,6 @@ export class AppComponent implements OnInit {
   //getIcons(): string[] {return Array.from(this.KEYandICON.values());}
 
   websiteBackgroundColor(): string { return ''; } // { return this.router.url === '/' + env.routesPath.program ? '#fff1d3' : ''; }
-  ICONS: string[] = ['home', 'casino'];
+  ICONS: string[] = ['home', 'casino', 'photo'];
 
 }

@@ -1,0 +1,11 @@
+<!-- immagini.component.html -->
+<div class="immagini-container">
+    <div *ngFor="let immagine of immagini" (click)="apriImmagine(immagine)">
+      <img [src]="immagine" alt="Immagine dell'evento">
+    </div>
+  </div>
+  
+  <div *ngIf="immagineSelezionata" class="overlay" (click)="chiudiImmagine()">
+    <img [src]="immagineSelezionata" alt="Immagine a tutto schermo">
+  </div>
+  
