@@ -53,4 +53,5 @@ export class AppComponent implements OnInit {
 
   websiteBackgroundColor(): string { return ''; } // { return this.router.url === '/' + env.routesPath.program ? '#fff1d3' : ''; }
   ICONS: string[] = ['home', 'casino'];
+
 }

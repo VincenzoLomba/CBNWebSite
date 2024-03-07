@@ -1,8 +1,13 @@
 
+
 <div class="home-image">
     <div class="home-black" [style.background]="'rgba(0, 0, 0, ' + 0.14 + ')'">
         <div>
-            <h1 style="margin: 0px 22px; font-family: Aesthetic; letter-spacing: 3px; color: white; line-height: 1.2; font-size: 36px;">
+            <h1 >
+                <div style="margin: 30 px 22px; font-family: Aesthetic; letter-spacing: 3px; color: rgb(255, 255, 255); line-height: 3.2; font-size: 15px;">waiting...</div>
+                <div style="margin: 30 px 22px; font-family: Aesthetic; letter-spacing: 3px; color: rgb(255, 255, 255); line-height: 2.2; font-size: 20px;" id="timer">{{ formattedTime }}</div>
+            </h1>
+            <h1 style="margin: 10px 22px; font-family: Aesthetic; letter-spacing: 3px; color: white; line-height: 1.2; font-size: 36px;">
                 <span *ngFor="let text of data().getSlogan().split('<br>')">{{text}}<br></span>
             </h1>
             <p style="margin: 16px 0px; font-family: Aesthetic; letter-spacing: 0.8px; color: white; line-height: 1.2; font-size: 24px;">
@@ -16,6 +21,7 @@
 </div>
 
 <div style="display: flex; align-items: center; justify-content: center;">
+    <script src="https://cdn.logwork.com/widget/countdown.js"></script>
     <div style="max-width: 700px;">
         <h1 style="margin: 18px 16px 16px 16px; font-size: 24px">
             Cos'è il {{data().getTitle()}}?
