@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
   constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer, private dataService: DataService, private router: Router){};
 
   public mnRoutes: Map<string, string> = new Map<string, string>([
-      ["Home & Mappa", env.routesPath.home],
+      ["Home", env.routesPath.home],
       /*
       ["Programma", env.routesPath.program],
       ["CBN Half Court", env.routesPath.sport],
@@ -54,7 +54,5 @@ export class AppComponent implements OnInit {
   //getIcons(): string[] {return Array.from(this.KEYandICON.values());}
 
   websiteBackgroundColor(): string { return ''; } // { return this.router.url === '/' + env.routesPath.program ? '#fff1d3' : ''; }
-  ICONS: string[] = ['home', 'casino', 'photo'];
-
-
+  ICONS: string[] = ['home', 'gavel', 'mood'];
 }
