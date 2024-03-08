@@ -26,7 +26,11 @@ import { ProgramComponent } from './program/program.component';
 import { SponsorComponent } from './sponsor/sponsor.component';
 import { SportComponent } from './sport/sport.component';
 import { CateringComponent } from './catering/catering.component';
+<<<<<<< Updated upstream
+import { GalleryComponent } from './gallery/gallery.component';
+=======
 import { ImagesComponent } from './immagini/immagini.component';
+>>>>>>> Stashed changes
 
 const appRoutes: Routes = [
   {path: env.routesPath.home, component: HomeComponent},
@@ -35,7 +39,11 @@ const appRoutes: Routes = [
   {path: env.routesPath.catering, component: CateringComponent},
   {path: env.routesPath.sport, component: SportComponent},
   {path: env.routesPath.sponsors, component: SponsorComponent},
+<<<<<<< Updated upstream
+  {path: env.routesPath.gallery, component: GalleryComponent},
+=======
   {path: env.routesPath.immagini, component: ImagesComponent},
+>>>>>>> Stashed changes
   {path: env.routesPath.cbnredirect, redirectTo: env.routesPath.lottery},
   {path: env.routesPath.none, redirectTo: env.routesPath.home, pathMatch: 'full'},
   {path: '**', redirectTo: env.routesPath.none}
@@ -51,7 +59,12 @@ const appRoutes: Routes = [
     SponsorComponent,
     SportComponent,
     CateringComponent,
-    ImagesComponent
+<<<<<<< Updated upstream
+    GalleryComponent
+=======
+    ImagesComponent,
+    CateringComponent
+>>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,

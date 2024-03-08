@@ -1,0 +1,65 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Display three elements per row */
+    gap: 20px;
+    margin: 20px;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+    cursor: pointer; /* Add an indicative cursor that the image is clickable */
+  }
+  
+  .overlay {
+    display: none; /* Hide the overlay by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Transparent black background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+  }
+  
+  .carousel {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .nav-btn.left {
+    left: 10px;
+  }
+  
+  .nav-btn.right {
+    right: 10px;
+  }
+  
+  .nav-btn:hover {
+    color: #ccc;
+  }
+  

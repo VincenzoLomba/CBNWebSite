@@ -1,14 +1,11 @@
 <div *ngIf="!pageLoaded"><mat-progress-bar></mat-progress-bar></div>
-
 <div *ngIf="pageLoaded">
-
     <mat-toolbar #idToolbar class="toolbar" [style.height]="toolbarHeight()" [ngClass]="'mat-elevation-z3'">
         <img src="../assets/logo24.png" width="30px" height="30px" (click)="goToHomePage()">
         <span style="flex: 1 1 auto;"></span>
         <button #menuButton mat-icon-button onclick="this.blur()" (click)="idSidenav.toggle()"><mat-icon>menu</mat-icon></button>
     </mat-toolbar>
-
-    <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav-container class="sidenav-container" [style.top]="toolbarHeight()">
       
       <mat-sidenav #idSidenav class="sidenav" [(opened)]="sidenavIsOpen" [autoFocus]="false" mode="over" position="end">
         <div style="text-align: center;">
@@ -16,6 +13,7 @@
           <div *ngFor="let name of menuRoutesNames(); let i = index"> 
             <a [routerLink]="['/' + menuRoutes().get(name)]" (click)="idSidenav.close()">
               <button mat-stroked-button class="sidenav-button" [style.margin-top]="i == 0 ? '27px' : '8px'">
+
                 <span class="material-icons">{{ICONS[i]}}</span>
                 &nbsp;&nbsp;
                     {{name}}
@@ -49,6 +47,5 @@
       </mat-sidenav-content>
     </mat-sidenav-container>
 </div>
-
 <!-- <img src="../assets/logo.png" width="{{toolbarHeight() - 26}}" height="{{toolbarHeight() - 26}}"> -->
 <!-- <button mat-icon-button (click)="idSideNav.toggle()"><mat-icon svgIcon="cbn" style="font-size:30px; width: 30px; height: 30px;"></mat-icon></button>-->

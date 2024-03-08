@@ -1,0 +1,14 @@
+<div class="gallery">
+    <div *ngFor="let immagine of immagini; let i = index" (click)="apriImmagine(immagine, i)">
+      <img [src]="immagine" alt="Immagine dell'evento">
+    </div>
+  </div>
+  
+  <div *ngIf="immagineSelezionata" class="overlay" (click)="chiudiImmagine()">
+    <div class="carousel">
+      <button class="nav-btn" (click)="navigaCarousel(-1)" *ngIf="buttonLeft">‹</button>
+      <img [src]="immagineSelezionata" alt="Immagine a tutto schermo">
+      <button class="nav-btn" (click)="navigaCarousel(1)" *ngIf="buttonRight">›</button>
+    </div>
+  </div>
+  

@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
       /*,
       ["Sponsors", env.routesPath.sponsors]
       */
-      ["Galleria", env.routesPath.immagini]
+      ["Galleria", env.routesPath.gallery]
   ]);
   
   /*public KEYandICON: Map<string, string> = new Map<string, string>([
@@ -55,5 +55,6 @@ export class AppComponent implements OnInit {
 
   websiteBackgroundColor(): string { return ''; } // { return this.router.url === '/' + env.routesPath.program ? '#fff1d3' : ''; }
   ICONS: string[] = ['home', 'casino', 'photo'];
+
 
 }
