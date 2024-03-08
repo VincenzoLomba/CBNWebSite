@@ -1,35 +1,22 @@
-/* immagini.component.scss */
-.immagini-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 20px;
-    margin: 20px;
-  
-    img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 8px;
-      cursor: pointer; /* Aggiungi un cursore indicativo che l'immagine è cliccabile */
-    }
-  }
-  
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9); /* Sfondo nero trasparente */
+.immagini {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+    flex-wrap: wrap;
+    gap: 10px;
   
-    img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 8px;
+    .immagine-item {
+      flex: 0 1 calc(33.33% - 10px);
+      cursor: pointer;
+  
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        transition: transform 0.2s ease-in-out;
+  
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
     }
   }
   

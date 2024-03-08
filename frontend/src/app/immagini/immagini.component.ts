@@ -1,26 +1,35 @@
-// immagini.component.ts
 import { Component } from '@angular/core';
+import { Lightbox } from 'ngx-lightbox';
+
+interface Image {
+  src: string;
+  alt: string;
+}
 
 @Component({
-  selector: 'app-immagini',
+  selector: 'app-images',
   templateUrl: './immagini.component.html',
-  styleUrls: ['./immagini.component.scss']
+  styleUrls: ['./immagini.component.scss'],
 })
-export class ImmaginiComponent {
-  immagini: string[] = [
-    'assets/images/img_1.JPG',
-    'assets/images/img_2.JPG',
-    'assets/images/img_3.JPG',
-    // Aggiungi gli altri percorsi delle tue immagini
+export class ImagesComponent {
+  images: Image[] = [
+    { src: './assets/images/immg1.jpg', alt: 'Image 1' },
+    { src: './assets/images/immg2.jpg', alt: 'Image 2' },
+    { src: './assets/images/immg3.jpg', alt: 'Image 3' }
+    // Aggiungi altre immagini secondo necessità
   ];
 
-  immagineSelezionata: string | null = null;
+  lightboxImages: any[] = [];
 
-  apriImmagine(immagine: string) {
-    this.immagineSelezionata = immagine;
+  constructor(private lightbox: Lightbox) {
+    this.lightboxImages = this.images.map((img) => ({
+      src: img.src,
+      caption: img.alt,
+      thumb: img.src, // Aggiungi questa linea
+    }));
   }
 
-  chiudiImmagine() {
-    this.immagineSelezionata = null;
+  openImage(image: any): void {
+    this.lightbox.open(this.lightboxImages, this.lightboxImages.indexOf(image));
   }
 }
