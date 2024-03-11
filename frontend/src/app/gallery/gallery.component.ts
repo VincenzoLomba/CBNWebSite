@@ -6,17 +6,50 @@ import { Component } from '@angular/core';
   styleUrls: ['./gallery.component.scss']
 })
 export class GalleryComponent {
-  immagini: string[] = [
-    'assets/images/immg1.jpg',
-    'assets/images/immg2.jpg',
-    'assets/images/immg3.jpg',
+  immagini2023: string[] = [
+    'assets/images/2023/immg1.jpg',
+    'assets/images/2023/immg2.jpg',
+    'assets/images/2023/immg3.jpg',
+    'assets/images/2023/immg4.jpg',
+    'assets/images/2023/immg5.jpg',
+    'assets/images/2023/immg6.jpg',
+    'assets/images/2023/immg7.jpg',
+    'assets/images/2023/immg8.jpg',
+    'assets/images/2023/immg9.jpg',
+    'assets/images/2023/immg10.jpg',
+    'assets/images/2023/immg11.jpg',
+    'assets/images/2023/immg12.jpg',
+    'assets/images/2023/immg13.jpg',
+    'assets/images/2023/immg14.jpg',
+    'assets/images/2023/immg15.jpg',
+    'assets/images/2023/immg16.jpg',
+    'assets/images/2023/immg17.jpg',
+    'assets/images/2023/immg18.jpg',
     // Aggiungi percorsi per le tue altre immagini
   ];
 
+  immagini2022: string[] = [
+    'assets/images/2022/immg1.jpg',
+    'assets/images/2022/immg2.jpg',
+    'assets/images/2022/immg3.jpg',
+    'assets/images/2022/immg4.jpg',
+    'assets/images/2022/immg5.jpg',
+    'assets/images/2022/immg6.jpg',
+    'assets/images/2022/immg7.jpg',
+    'assets/images/2022/immg8.jpg',
+    'assets/images/2022/immg9.jpg',
+    'assets/images/2022/immg10.jpg',
+    'assets/images/2022/immg11.jpg',
+    'assets/images/2022/immg12.jpg',
+    'assets/images/2022/immg13.jpg',
+    'assets/images/2022/immg14.jpg',
+    'assets/images/2022/immg15.jpg',
+    // Aggiungi percorsi per le tue altre immagini
+  ];
+
+
   immagineSelezionata: string | null = null;
   indiceImmagineSelezionata: number | null = null;
-  buttonLeft: boolean | null = null;
-  buttonRight: boolean | null = null;
 
   apriImmagine(immagine: string, index: number) {
     this.immagineSelezionata = immagine;
@@ -24,23 +57,8 @@ export class GalleryComponent {
   }
 
   chiudiImmagine() {
-    if(!(this.buttonLeft && this.buttonRight)){
       this.immagineSelezionata = null;
       this.indiceImmagineSelezionata = null;
-    }
   }
 
-  navigaCarousel(delta: number) {
-    if (this.immagineSelezionata !== null && this.indiceImmagineSelezionata !== null) {
-      let newIndex = this.indiceImmagineSelezionata + delta;
-      if (newIndex < 0) {
-        newIndex = this.immagini.length - 1;  // Torna all'ultima immagine se si raggiunge il bordo sinistro
-      } else if (newIndex >= this.immagini.length) {
-        newIndex = 0;  // Torna alla prima immagine se si raggiunge il bordo destro
-      }
-
-      this.indiceImmagineSelezionata = newIndex;
-      this.immagineSelezionata = this.immagini[newIndex];
-    }
-  }
 }
