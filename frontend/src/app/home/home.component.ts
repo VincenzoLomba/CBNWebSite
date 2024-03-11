@@ -52,4 +52,18 @@ export class HomeComponent implements OnInit {
   private formatTimeUnit(unit: number): string {
     return unit < 10 ? '0' + unit : unit.toString();
   }
+
+  public showImage: boolean = false;
+  public tenclick: number = 30;
+
+  SHOW(){
+    if(this.tenclick<=0){
+      this.showImage=true;
+    }
+  }
+
+  toggleImage() {
+    this.tenclick = this.tenclick -1;
+    this.SHOW();
+  }
 }

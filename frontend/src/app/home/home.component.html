@@ -4,7 +4,7 @@
     <div class="home-black" [style.background]="'rgba(0, 0, 0, ' + 0.14 + ')'">
         <div>
             <h1 >
-                <div style="margin: 30 px 22px; font-family: Aesthetic; letter-spacing: 3px; color: rgb(255, 255, 255); line-height: 3.2; font-size: 15px;">stay tuned...</div>
+                <div (click)="toggleImage()" style="margin: 30 px 22px; font-family: Aesthetic; letter-spacing: 3px; color: rgb(255, 255, 255); line-height: 3.2; font-size: 15px;">stay tuned...</div>
                 <div style="margin: 30 px 22px; font-family: Aesthetic; letter-spacing: 3px; color: rgb(255, 255, 255); line-height: 2.2; font-size: 20px;" id="timer">{{ formattedTime }}</div>
             </h1>
             <h1 style="margin: 10px 22px; font-family: Aesthetic; letter-spacing: 3px; color: white; line-height: 1.2; font-size: 36px;">
@@ -13,6 +13,9 @@
             <p style="margin: 16px 0px; font-family: Aesthetic; letter-spacing: 0.8px; color: white; line-height: 1.2; font-size: 24px;">
                 {{data().getTitle()}}
             </p>
+            <div *ngIf="showImage" class="EasterEgg">
+                <img src="assets/images/QuarantaDue.jpg" >
+            </div>
             <p style="margin: 0px; font-family: Aesthetic; letter-spacing: 0.8px; color: white; line-height: 1.3; font-size: 24px;">
                 <span *ngFor="let text of data().getDateAndPlace().split('<br>')">{{text}}<br></span>
             </p>

@@ -1,10 +1,16 @@
 <div> <!-- style="display: block; margin-left: auto; margin-right: auto; max-width: 960px;" -->
     <div class="home-image">
         <div class="home-black" [style.background]="'rgba(0, 0, 0, ' + 0.42 + ')'">
-            <h1 style="padding: 26px 20px 20px 20px">LOTTERIA<br>CBN 2024</h1>
+            <h1 (click)="toggleImage()" style="padding: 26px 20px 20px 20px" >LOTTERIA<br>CBN 2024</h1>
         </div>
     </div>
 </div>
+<h1>
+    <div *ngIf="showImage" class="EasterEgg">
+        <img src="assets/images/Pinguino.jpg" >
+    </div>
+</h1>
+
 
 <div class="container">
 
@@ -56,6 +62,9 @@
             </tr>
         </tbody>
     </table>
+
+    
+
 </div>
 
 <app-footer></app-footer>
