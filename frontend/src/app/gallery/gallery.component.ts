@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-
+import { Component, ElementRef } from '@angular/core';
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
@@ -50,6 +49,7 @@ export class GalleryComponent {
 
   immagineSelezionata: string | null = null;
   indiceImmagineSelezionata: number | null = null;
+  constructor(private el: ElementRef) {}
 
   apriImmagine(immagine: string, index: number) {
     this.immagineSelezionata = immagine;
@@ -57,8 +57,23 @@ export class GalleryComponent {
   }
 
   chiudiImmagine() {
-      this.immagineSelezionata = null;
-      this.indiceImmagineSelezionata = null;
+    this.immagineSelezionata = null;
+    this.indiceImmagineSelezionata = null;
   }
+
+  navigaImmagine(delta: number, event: Event) {
+    event.stopPropagation(); // Stop the click event from propagating
+
+    if (this.indiceImmagineSelezionata !== null) {
+      const newIndex = this.indiceImmagineSelezionata + delta;
+
+      if (newIndex >= 0 && newIndex < this.immagini2023.length) {
+        this.indiceImmagineSelezionata = newIndex;
+        this.immagineSelezionata = this.immagini2023[newIndex];
+      }
+    }
+}
+
+
 
 }

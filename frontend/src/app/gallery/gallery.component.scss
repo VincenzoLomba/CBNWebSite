@@ -113,3 +113,34 @@ h2 {
   ;
   */
 }
+// Add the following styles for the navigation buttons
+.carousel {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1001; // Ensure the buttons appear above the overlay
+  }
+
+  .nav-btn.left {
+    left: 10px;
+  }
+
+  .nav-btn.right {
+    right: 10px;
+  }
+
+  .nav-btn:hover {
+    color: #ccc;
+  }
+}
