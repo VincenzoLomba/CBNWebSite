@@ -73,7 +73,16 @@ export class GalleryComponent {
       }
     }
 }
+visibleGalleries: { [key: string]: boolean } = {
+  '2023': false,
+  '2022': false
+};
 
+isGalleryVisible(edition: string): boolean {
+  return this.visibleGalleries[edition];
+}
 
-
+toggleGalleryVisibility(edition: string): void {
+  this.visibleGalleries[edition] = !this.visibleGalleries[edition];
+}
 }

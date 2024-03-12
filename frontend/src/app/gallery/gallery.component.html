@@ -1,29 +1,52 @@
-<h1>Edizione 2023</h1>
-<div class="gallery">
+
+<div *ngIf="!isGalleryVisible('2023')">
+  <div class="album-title" (click)="toggleGalleryVisibility('2023')">
+    <h1>Edizione 2023
+    <i class="material-icons">keyboard_arrow_up</i></h1>
+  </div>
+</div>
+<div *ngIf="isGalleryVisible('2023')">
+  <div class="album-title album-open" (click)="toggleGalleryVisibility('2023')">
+    <h1>Edizione 2023
+    <i class="material-icons">keyboard_arrow_down</i></h1>
+  </div>
+  <div class="gallery">
     <div *ngFor="let immagine of immagini2023; let i = index" (click)="apriImmagine(immagine, i)">
-        <img [src]="immagine" alt="Immagine dell'evento">
+      <img [src]="immagine" alt="Immagine dell'evento">
     </div>
+  </div>
 </div>
-<div *ngIf="immagineSelezionata" class="overlay" (click)="chiudiImmagine()">
-  <div class="carousel">
+  <div *ngIf="immagineSelezionata" class="overlay" (click)="chiudiImmagine()">
+    <div class="carousel">
       <button class="nav-btn left" (click)="navigaImmagine(-1, $event)">‹</button>
       <img [src]="immagineSelezionata" alt="Immagine a tutto schermo">
       <button class="nav-btn right" (click)="navigaImmagine(1, $event)">›</button>
+    </div>
+  </div>
+
+
+
+<div *ngIf="!isGalleryVisible('2022')">
+  <div class="album-title" (click)="toggleGalleryVisibility('2022')">
+    <h1>Edizione 2022
+    <i class="material-icons">keyboard_arrow_up</i></h1>
   </div>
 </div>
-
-
-<h1>Edizione 2022</h1>
-<div class="gallery">
+<div *ngIf="isGalleryVisible('2022')">
+  <div class="album-title album-open" (click)="toggleGalleryVisibility('2022')">
+    <h1>Edizione 2022
+    <i class="material-icons">keyboard_arrow_down</i></h1>
+  </div>
+  <div class="gallery">
     <div *ngFor="let immagine of immagini2022; let i = index" (click)="apriImmagine(immagine, i)">
-        <img [src]="immagine" alt="Immagine dell'evento">
+      <img [src]="immagine" alt="Immagine dell'evento">
     </div>
+  </div>
 </div>
-<div *ngIf="immagineSelezionata" class="overlay" (click)="chiudiImmagine()">
-  <div class="carousel">
+  <div *ngIf="immagineSelezionata" class="overlay" (click)="chiudiImmagine()">
+    <div class="carousel">
       <button class="nav-btn left" (click)="navigaImmagine(-1, $event)">‹</button>
       <img [src]="immagineSelezionata" alt="Immagine a tutto schermo">
       <button class="nav-btn right" (click)="navigaImmagine(1, $event)">›</button>
+    </div>
   </div>
-</div>
-
