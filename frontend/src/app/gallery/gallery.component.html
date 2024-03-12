@@ -1,12 +1,16 @@
+  <div class="imageBCK">
+    scorse edizioni . . .
+  </div>
 
+<div class="page">
 <div *ngIf="!isGalleryVisible('2023')">
-  <div class="album-title" (click)="toggleGalleryVisibility('2023')">
+  <div (mouseover)="changeCursor(true)" (mouseout)="changeCursor(false)"  class="album-title" class="clickable-item"  (click)="toggleGalleryVisibility('2023')">
     <h1>Edizione 2023
     <i class="material-icons">keyboard_arrow_up</i></h1>
   </div>
 </div>
 <div *ngIf="isGalleryVisible('2023')">
-  <div class="album-title album-open" (click)="toggleGalleryVisibility('2023')">
+  <div (mouseover)="changeCursor(true)" (mouseout)="changeCursor(false)" class="album-title album-open"class="clickable-item"  (click)="toggleGalleryVisibility('2023')">
     <h1>Edizione 2023
     <i class="material-icons">keyboard_arrow_down</i></h1>
   </div>
@@ -27,13 +31,13 @@
 
 
 <div *ngIf="!isGalleryVisible('2022')">
-  <div class="album-title" (click)="toggleGalleryVisibility('2022')">
+  <div (mouseover)="changeCursor(true)" (mouseout)="changeCursor(false)"  class="album-title" class="clickable-item" (click)="toggleGalleryVisibility('2022')">
     <h1>Edizione 2022
     <i class="material-icons">keyboard_arrow_up</i></h1>
   </div>
 </div>
 <div *ngIf="isGalleryVisible('2022')">
-  <div class="album-title album-open" (click)="toggleGalleryVisibility('2022')">
+  <div (mouseover)="changeCursor(true)" (mouseout)="changeCursor(false)" class="album-title album-open"class="clickable-item"   (click)="toggleGalleryVisibility('2022')">
     <h1>Edizione 2022
     <i class="material-icons">keyboard_arrow_down</i></h1>
   </div>
@@ -50,3 +54,6 @@
       <button class="nav-btn right" (click)="navigaImmagine(1, $event)">›</button>
     </div>
   </div>
+</div>
+<div class="pagefinish"></div>
+<app-footer></app-footer>

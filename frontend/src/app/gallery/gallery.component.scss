@@ -1,3 +1,61 @@
+
+.imageBCK {
+  height: 55%;
+  //margin: 3%;
+  text-align: center;
+  background-image: url("/assets/background24.jpg") ;
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.2;
+  // text-align: center;
+  // margin-top: 22.78px;
+  // margin-bottom: 100px;
+  font-family: Aesthetic;
+  letter-spacing: 2px;
+  font-size: 200%;
+  align-self:center;
+  //border-radius: 10%;
+
+  color: white;
+}
+
+
+/*
+.page{
+  background-color: rgb(45, 60, 159);
+  display: flex;
+  flex-direction: column;
+  background-position: center center;
+  background-size:cover;
+  background-position:center;
+  background-repeat: repeat;
+  display:flex;
+  height:fit-content;
+  width: 100%;
+  align-self: center;
+  align-content:center;
+
+}
+.pagefinish{
+  background-color: rgb(45, 60, 159);
+  display: flex;
+  flex-direction: column;
+  background-position: center;
+  background-size:cover;
+  background-position:center;
+  background-repeat: repeat;
+  display:block;
+  height:(100%)- max-content;
+  width: 100%;
+  position: static;
+  align-self: center;
+  align-content:center;
+
+}*/
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Display three elements per row */
@@ -22,7 +80,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.735); /* Transparent black background */
+    background: rgba(0, 0, 0, 0.381); /* Transparent black background */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,35 +96,6 @@
     position: inherit;
   }
   
-  .carousel {
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .nav-btn {
-    position: absolute;
-    top: 50%;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .nav-btn.left {
-    left: 10px;
-  }
-  
-  .nav-btn.right {
-    right: 10px;
-  }
-  
-  .nav-btn:hover {
-    color: #ccc;
-  }
 
   h1 {
     line-height: 1.2;
@@ -147,4 +176,13 @@ h2 {
 
 .album-open .material-icons {
   transform: rotate(-90deg);
+}
+
+.clickable-item {
+  // Altri stili per l'elemento cliccabile
+
+  // Cambia il cursore quando il mouse è sopra l'elemento
+  &:hover {
+    cursor: pointer; // Puoi usare il cursore che preferisci
+  }
 }

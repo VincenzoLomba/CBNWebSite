@@ -85,4 +85,9 @@ isGalleryVisible(edition: string): boolean {
 toggleGalleryVisibility(edition: string): void {
   this.visibleGalleries[edition] = !this.visibleGalleries[edition];
 }
+isHovered: boolean = false;
+
+  changeCursor(hovered: boolean) {
+    this.isHovered = hovered;
+  }
 }
