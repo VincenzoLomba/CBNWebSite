@@ -21,11 +21,13 @@
     "@angular/platform-browser": "^15.2.0",
     "@angular/platform-browser-dynamic": "^15.2.0",
     "@angular/router": "^15.2.0",
+    "keen-slider": "^6.8.6",
     "ngx-gallery": "^5.10.0",
     "ngx-google-analytics": "^14.0.1",
     "ngx-image-cropper": "^7.2.1",
     "ngx-lightbox": "^3.0.0",
     "rxjs": "~7.8.0",
+    "swiper": "^11.0.7",
     "tslib": "^2.3.0",
     "zip": "^1.2.0",
     "zone.js": "~0.12.0"
