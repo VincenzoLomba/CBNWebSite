@@ -4,7 +4,7 @@
 
 <div class="page">
 
-  <div class="gallery-container" *ngFor="let edition of ['2023', '2022', '2021']">
+  <div class="gallery-container" *ngFor="let edition of ['2023', '2022']">
     <div *ngIf="!isGalleryVisible(edition)">
       <div (click)="toggleGalleryVisibility(edition)" class="album-title clickable-item">
         <h1>Edizione {{ edition }} <i class="material-icons">keyboard_arrow_up</i></h1>
@@ -20,14 +20,16 @@
           <img [src]="immagine" alt="Immagine dell'evento" />
         </div>
       </div>
-    </div>
-    <div class="overlay" *ngIf="visibleGalleries[edition].selectedImage" (click)="visibleGalleries[edition].selectedImage = null">
+    </div><div class="overlay" *ngIf="visibleGalleries[edition].selectedImage" (click)="closeOverlay($event, edition)">
       <div class="carousel">
         <button class="nav-btn left" (click)="navigaImmagine(edition, -1, $event)">‹</button>
-        <img [src]="visibleGalleries[edition].selectedImage" alt="Immagine a tutto schermo" />
+        <!-- Utilizza l'autoplay solo se è stato selezionato un video -->
+        <video *ngIf="isVideoSelected" controls autoplay [src]="visibleGalleries[edition].selectedImage"></video>
+        <img *ngIf="!isVideoSelected" [src]="visibleGalleries[edition].selectedImage" alt="Immagine a tutto schermo" />
         <button class="nav-btn right" (click)="navigaImmagine(edition, 1, $event)">›</button>
       </div>
     </div>
+
   </div>
   
 </div>

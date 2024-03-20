@@ -57,22 +57,38 @@
 
 }*/
 .gallery {
+    left: 50%;
+    right: 50%;
+     align-self: center;
+     align-items: center;
+     align-content: center;
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Display three elements per row */
+    grid-auto-flow:inherit;
     gap: 20px;
-    margin: 20px;
+    margin-left:5%;
     //background-color: rgb(43, 53, 139);
     border-radius: 16px;
   }
   
   img {
-    width: 90%;
+    width: 80%;
+    top:50%;
+    bottom:50%;
     height: auto;
-    display: block;
+    display: flex;
     border-radius: 16px;
     cursor: pointer; /* Add an indicative cursor that the image is clickable */
   }
-  
+  video{
+    width: 80%;
+    top:50%;
+    bottom:50%;
+    height: auto;
+    display: flex;
+    border-radius: 16px;
+    cursor: pointer; /* Add an indicative cursor that the image is clickable */
+  }
   .overlay {
     display: none; /* Hide the overlay by default */
     position: fixed;
