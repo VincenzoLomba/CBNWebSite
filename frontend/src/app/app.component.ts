@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
       /*,
       ["Sponsors", env.routesPath.sponsors]
       */
-      ["Galleria", env.routesPath.immagini]
+      // ["Galleria", env.routesPath.immagini]
   ]);
   
   /*public KEYandICON: Map<string, string> = new Map<string, string>([
