@@ -183,10 +183,9 @@ export class GalleryComponent {
     );
   }
 
-  closeOverlay(event: MouseEvent, edition: string): void {
-    const isClickInsideCarousel = (event.target as HTMLElement).closest('.carousel');
-    if (!isClickInsideCarousel) {
-      this.visibleGalleries[edition].selectedImage = null;
-    }
+  closeOverlay(edition: string): void {
+    this.visibleGalleries[edition].selectedImage = null;
+    this.visibleGalleries[edition].selectedIndex = null;
   }
+
 }

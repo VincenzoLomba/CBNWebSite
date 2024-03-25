@@ -20,12 +20,14 @@
           <img [src]="immagine" alt="Immagine dell'evento" />
         </div>
       </div>
-    </div><div class="overlay" *ngIf="visibleGalleries[edition].selectedImage" (click)="closeOverlay($event, edition)">
+    </div><div class="overlay" *ngIf="visibleGalleries[edition].selectedImage">
       <div class="carousel">
         <button class="nav-btn left" (click)="navigaImmagine(edition, -1, $event)">‹</button>
+        <button class="close-btn" (click)="closeOverlay(edition)"><i class="material-icons">close</i></button>
         <!-- Utilizza l'autoplay solo se è stato selezionato un video -->
         <video *ngIf="isVideoSelected" controls autoplay [src]="visibleGalleries[edition].selectedImage"></video>
         <img *ngIf="!isVideoSelected" [src]="visibleGalleries[edition].selectedImage" alt="Immagine a tutto schermo" />
+        <button class="close-btn" (click)="closeOverlay(edition)"><i class="material-icons">close</i></button>
         <button class="nav-btn right" (click)="navigaImmagine(edition, 1, $event)">›</button>
       </div>
     </div>
