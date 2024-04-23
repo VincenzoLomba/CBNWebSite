@@ -3,7 +3,6 @@ import { env } from './env';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { DataService } from './services/data.service';
-import { MatDrawer, MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
 
 const dataStructure = new Map();
@@ -20,24 +19,22 @@ export class AppComponent implements OnInit {
   public sidenavIsOpen: boolean = false;
   constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer, private dataService: DataService, private router: Router){};
 
-  public mnRoutes: Map<string, string> = new Map<string, string>([
-      ["Home & Mappa", env.routesPath.home],
-      /*
-      ["Programma", env.routesPath.program],
-      ["CBN Half Court", env.routesPath.sport],
-      ["Menu Ristorazione", env.routesPath.catering],
-      */
-      ["Lotteria", env.routesPath.lottery],
-      /*,
-      ["Sponsors", env.routesPath.sponsors]
-      */
-      // ["Galleria", env.routesPath.immagini]
+  /*
+   ["Programma", env.routesPath.program],
+   ["CBN Half Court", env.routesPath.sport],
+   ["Menu Ristorazione", env.routesPath.catering],
+   ["Sponsors", env.routesPath.sponsors]
+  */
+  public mnRoutes: Map<string, SingleRoute> = new Map<string, SingleRoute>([
+      ["Home & Mappa", new SingleRoute(env.routesPath.home,    'home')],
+      ["Lotteria",     new SingleRoute(env.routesPath.lottery, 'confirmation_number')],
+      ["Galleria",     new SingleRoute(env.routesPath.gallery, 'photo')]
   ]);
-  
-  /*public KEYandICON: Map<string, string> = new Map<string, string>([
-    ["Home & Mappa", "home"],
-    ["Lotteria", "casino"]
-  ]);*/
+  public mnIcons: Map<string, string> = new Map<string, string>([
+    [env.routesPath.home, 'home'],
+    [env.routesPath.lottery, 'confirmation_number'],
+    [env.routesPath.gallery, 'photo']
+  ]);
 
   ngOnInit(): void {
     this.matIconRegistry.addSvgIcon('gmaps', this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/gmapsicon.svg') );
@@ -50,10 +47,14 @@ export class AppComponent implements OnInit {
 
   goToHomePage(): void { this.router.navigateByUrl(env.routesPath.home); }
   menuRoutesNames(): string[] { return Array.from(this.mnRoutes.keys()); }
-  menuRoutes(): Map<string, string> { return this.mnRoutes; }
-  //getIcons(): string[] {return Array.from(this.KEYandICON.values());}
+  menuRoutes(): Map<string, SingleRoute> { return this.mnRoutes; }
 
   websiteBackgroundColor(): string { return ''; } // { return this.router.url === '/' + env.routesPath.program ? '#fff1d3' : ''; }
-  ICONS: string[] = ['home', 'casino', 'photo'];
 
+}
+
+export class SingleRoute {
+  link: string;
+  icon: string;
+  constructor(link: string, icon: string) { this.link = link; this.icon = icon; };
 }

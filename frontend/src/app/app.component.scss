@@ -17,7 +17,6 @@ $toolbar-height: 56px;
     bottom: 0;
     left: 0;
     right: 0;
-    
     top: $toolbar-height;
 }
 
@@ -27,14 +26,6 @@ $toolbar-height: 56px;
     font-size: 25px;
     color: #2c3a9d;
     letter-spacing: 1px;
-    /*
-    text-shadow:
-        -1px 0px 0px black,
-        1px 0px 0px black,
-        0px -1px 0px black,
-        0px 1px 0px black
-    ;
-    */
 }
 
 .sidenav-button {
@@ -43,6 +34,7 @@ $toolbar-height: 56px;
     width: 80%;
 }
 
+/* Necessary in order to alter icons color */
 .material-icons {
     font-family: 'Material Icons';
     font-weight: normal;
@@ -61,11 +53,8 @@ $toolbar-height: 56px;
     -webkit-font-smoothing: antialiased;
     /* Support for Safari and Chrome. */
     text-rendering: optimizeLegibility;
-  
     /* Support for Firefox. */
     -moz-osx-font-smoothing: grayscale;
-  
     /* Support for IE. */
     font-feature-settings: 'liga';
   }
-

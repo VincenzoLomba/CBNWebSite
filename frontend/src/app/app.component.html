@@ -14,10 +14,11 @@
         <div style="text-align: center;">
           <p class="sidenav-title">{{data().getShort()}}</p>
           <div *ngFor="let name of menuRoutesNames(); let i = index"> 
-            <a [routerLink]="['/' + menuRoutes().get(name)]" (click)="idSidenav.close()">
+            <a [routerLink]="['/' + menuRoutes().get(name)?.link]" (click)="idSidenav.close()">
               <button mat-stroked-button class="sidenav-button" [style.margin-top]="i == 0 ? '27px' : '8px'">
-                <!--<span class="material-icons">{{ICONS[i]}}</span>-->
-                <!--&nbsp;&nbsp;-->{{name}}
+                <mat-icon>{{menuRoutes().get(name)?.icon}}</mat-icon>
+                <span style="flex: 1 1 auto;"></span>
+                {{name}}
               </button>
             </a>
             <br>
@@ -46,6 +47,7 @@
       <mat-sidenav-content [style.background-color]="websiteBackgroundColor()">
         <router-outlet></router-outlet>
       </mat-sidenav-content>
+      
     </mat-sidenav-container>
 </div>
 
