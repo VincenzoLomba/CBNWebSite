@@ -1,19 +1,26 @@
 
 
-<div class="imageBCK">Cosa siamo stati...</div>
+<div class="home-image">
+  <div class="home-black" [style.background]="'rgba(0, 0, 0, ' + 0.22 + ')'">
+    Cosa siamo stati...
+  </div>
+</div>
 
 <div class="page">
 
   <div class="gallery-container" *ngFor="let edition of ['2023', '2022']" style="text-align: center; margin-top: 24px;">
+
     <div *ngIf="!isGalleryVisible(edition)">
       <div (click)="toggleGalleryVisibility(edition)" class="album-title clickable-item">
-        <h1>Edizione {{ edition }} <i class="material-icons">keyboard_arrow_down</i></h1>
+      <h1>Edizione {{edition}} <i class="material-icons">keyboard_arrow_down</i></h1>
       </div>
     </div>
+
     <div *ngIf="isGalleryVisible(edition)">
       <div (click)="toggleGalleryVisibility(edition)" class="album-title album-open clickable-item">
-        <h1>Edizione {{ edition }} <i class="material-icons">keyboard_arrow_up</i></h1>
+      <h1>Edizione {{edition}} <i class="material-icons">keyboard_arrow_up</i></h1>
       </div>
+
       <div class="gallery">
         <div *ngFor="let immagine of (edition === '2023' ? immagini2023 : (edition === '2022' ? immagini2022 : immagini2021)); let i = index"
      (click)="apriImmagine(edition, immagine, i)">
