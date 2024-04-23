@@ -7,7 +7,7 @@ export const env = {
         sponsors: 'sponsor',
         catering: 'ristorazione',
         sport: 'sport',
-        immagini: 'immagini',
+        gallery: 'gallery',
         cbnredirect: 'cbnredirect'
     }
 };

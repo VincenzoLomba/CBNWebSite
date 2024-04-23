@@ -1,7 +1,6 @@
 .home-image {
     
     text-align: center;
-
     background-image: url("/assets/background24.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -79,4 +78,30 @@ tbody tr:hover {
     /*background-color: #de643f;
     color: #fff;
     border-bottom: 2px solid #4f88cd;*/
+}
+
+.EasterEgg {
+    
+    display: none; /* Hide the overlay by default */
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.735); /* Transparent black background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    
+}
+.EasterEgg img{
+
+        border-radius: 10px;
+        margin: 25%;
+        width: 50%;
+        align-self: center;
+        position: fixed;
+        align-self:center;
+        position:fixed;
 }

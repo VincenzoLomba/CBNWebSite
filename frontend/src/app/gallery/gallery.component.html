@@ -1,0 +1,38 @@
+
+
+<div class="imageBCK">cosa siamo stati  . . .</div>
+
+<div class="page">
+
+  <div class="gallery-container" *ngFor="let edition of ['2023', '2022']">
+    <div *ngIf="!isGalleryVisible(edition)">
+      <div (click)="toggleGalleryVisibility(edition)" class="album-title clickable-item">
+        <h1>Edizione {{ edition }} <i class="material-icons">keyboard_arrow_up</i></h1>
+      </div>
+    </div>
+    <div *ngIf="isGalleryVisible(edition)">
+      <div (click)="toggleGalleryVisibility(edition)" class="album-title album-open clickable-item">
+        <h1>Edizione {{ edition }} <i class="material-icons">keyboard_arrow_down</i></h1>
+      </div>
+      <div class="gallery">
+        <div *ngFor="let immagine of (edition === '2023' ? immagini2023 : (edition === '2022' ? immagini2022 : immagini2021)); let i = index"
+     (click)="apriImmagine(edition, immagine, i)">
+          <img [src]="immagine" alt="Immagine dell'evento" />
+        </div>
+      </div>
+    </div><div class="overlay" *ngIf="visibleGalleries[edition].selectedImage" (click)="closeOverlay($event, edition)">
+      <div class="carousel">
+        <button class="nav-btn left" (click)="navigaImmagine(edition, -1, $event)">‹</button>
+        <!-- Utilizza l'autoplay solo se è stato selezionato un video -->
+        <video *ngIf="isVideoSelected" controls autoplay [src]="visibleGalleries[edition].selectedImage"></video>
+        <img *ngIf="!isVideoSelected" [src]="visibleGalleries[edition].selectedImage" alt="Immagine a tutto schermo" />
+        <button class="nav-btn right" (click)="navigaImmagine(edition, 1, $event)">›</button>
+      </div>
+    </div>
+
+  </div>
+  
+</div>
+<H1>e tanto altro...</H1>
+<div class="pagefinish"></div>
+<app-footer></app-footer>

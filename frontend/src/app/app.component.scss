@@ -47,17 +47,16 @@ $toolbar-height: 56px;
     font-family: 'Material Icons';
     font-weight: normal;
     font-style: normal;
-    font-size: 24px;  /* Preferred icon size */
-    display: inline-block;
+    font-size: 25px;  /* Preferred icon size */
+    display:flex;
     line-height: 1;
     text-transform: none;
     letter-spacing: normal;
     word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
+    white-space:initial;
+    direction:initial;
     color: rgb(191,82,19);
-    align-self:normal;
-
+    align-self:center;
     /* Support for all WebKit browsers. */
     -webkit-font-smoothing: antialiased;
     /* Support for Safari and Chrome. */
