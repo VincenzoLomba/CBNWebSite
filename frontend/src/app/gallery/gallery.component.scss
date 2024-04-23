@@ -1,5 +1,6 @@
 
 .imageBCK {
+
   height: 55%;
   //margin: 3%;
   text-align: center;
@@ -19,7 +20,6 @@
   font-size: 200%;
   align-self:center;
   //border-radius: 10%;
-
   color: white;
 }
 
@@ -56,23 +56,23 @@
   align-content:center;
 
 }*/
+
 .gallery {
   max-width: 1000px; /* Imposta la larghezza massima del body a 1000px */
   margin: 0 auto;
-    left: 50%;
-    right: 50%;
-     align-self: center;
-     align-items: center;
-     align-content: center;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Display three elements per row */
-    grid-auto-flow:inherit;
-    gap: 20px;
-    margin-left:5%;
-    //background-color: rgb(43, 53, 139);
-    border-radius: 16px;
+  left: 50%;
+  right: 50%;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Display three elements per row */
+  grid-auto-flow:inherit;
+  gap: 20px;
+  margin-left:5%;
+  //background-color: rgb(43, 53, 139);
+  border-radius: 16px;
   }
-  
   img {
     width: 80%;
     top:50%;
@@ -106,19 +106,17 @@
     max-height: 100vh;
     z-index: 1000;
   }
-  
   .overlay img {
     border-radius: 10px;
     top:50%;
     bottom:50%;
     margin: 5%;
-    max: height 80vh;
+    max-height: 80vh;
     max-width: 80vh;
     align-self: center;
     position:static;
     align-self:center;
   }
-  
 
   h1 {
     line-height: 1.2;
@@ -131,8 +129,6 @@
     align-self:center;
     margin-top:3%;
     margin-left:3%;
-
-
     color: rgb(223,96,19); //#de643f;
     /*
     text-shadow:
@@ -143,7 +139,6 @@
     ;
     */
 }
-
 
 h2 {
   line-height: 1.2;
@@ -171,10 +166,8 @@ h2 {
   width: 100%;
   display: flex;
   align-items: center;
-
   justify-content: center;
 }
-
 .nav-btn {
   position: fixed;
   top: 50%; /* Place the buttons vertically centered */
@@ -186,23 +179,18 @@ h2 {
   cursor: pointer;
   z-index: 1001; /* Ensure the buttons appear above the overlay */
 }
-
 .nav-btn.left {
   left: 10px;
 }
-
 .nav-btn.right {
   right: 10px;
 }
-
 .nav-btn:hover {
   color: #ccc;
 }
-
 .album-open .material-icons {
   transform: rotate(-90deg);
 }
-
 .clickable-item {
   // Altri stili per l'elemento cliccabile
 

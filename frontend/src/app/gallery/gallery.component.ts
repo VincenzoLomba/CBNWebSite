@@ -1,11 +1,13 @@
+
 import { Component, ElementRef } from '@angular/core';
-import KeenSlider from 'keen-slider';
+
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.scss'],
 })
 export class GalleryComponent {
+
   path2023: string = 'assets/images/2023/';
 
   immagini2023: string[] = [

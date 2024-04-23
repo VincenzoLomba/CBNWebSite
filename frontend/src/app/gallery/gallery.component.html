@@ -1,18 +1,18 @@
 
 
-<div class="imageBCK">cosa siamo stati  . . .</div>
+<div class="imageBCK">Cosa siamo stati...</div>
 
 <div class="page">
 
-  <div class="gallery-container" *ngFor="let edition of ['2023', '2022']">
+  <div class="gallery-container" *ngFor="let edition of ['2023', '2022']" style="text-align: center; margin-top: 24px;">
     <div *ngIf="!isGalleryVisible(edition)">
       <div (click)="toggleGalleryVisibility(edition)" class="album-title clickable-item">
-        <h1>Edizione {{ edition }} <i class="material-icons">keyboard_arrow_up</i></h1>
+        <h1>Edizione {{ edition }} <i class="material-icons">keyboard_arrow_down</i></h1>
       </div>
     </div>
     <div *ngIf="isGalleryVisible(edition)">
       <div (click)="toggleGalleryVisibility(edition)" class="album-title album-open clickable-item">
-        <h1>Edizione {{ edition }} <i class="material-icons">keyboard_arrow_down</i></h1>
+        <h1>Edizione {{ edition }} <i class="material-icons">keyboard_arrow_up</i></h1>
       </div>
       <div class="gallery">
         <div *ngFor="let immagine of (edition === '2023' ? immagini2023 : (edition === '2022' ? immagini2022 : immagini2021)); let i = index"
@@ -35,6 +35,8 @@
   </div>
   
 </div>
-<H1>e tanto altro...</H1>
+<div style="text-align: center;">
+  <H1>e tanto altro...</H1>
+</div>
 <div class="pagefinish"></div>
 <app-footer></app-footer>
