@@ -5,12 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './program.component.html',
   styleUrls: ['./program.component.scss']
 })
-export class ProgramComponent implements OnInit{
+export class ProgramComponent{
 
   photoLoaded: boolean = false;
-  spotifyLoaded: boolean = true;
-
-  ngOnInit(): void {
-    // ...
-  }
 }

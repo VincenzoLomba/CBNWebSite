@@ -1,22 +1,7 @@
-<mat-progress-bar *ngIf="!photoLoaded || !spotifyLoaded" mode="indeterminate"></mat-progress-bar>
-<div [hidden]="!photoLoaded || !spotifyLoaded">
-    <iframe (load)="spotifyLoaded = true"
-            style="
-                border-radius:12px;
-                padding-top: 8px;
-                padding-bottom: 8px;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                width: calc(100% - 16px);
-                max-width: 700px;"
-            src="https://open.spotify.com/embed/show/6oec6HSy5WyYPP1KyXat2O?utm_source=generator&t=0"
-            height="152"
-            frameBorder="0"
-            allowfullscreen=""
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy">
-    </iframe>
-    <img src="../../assets/programma.jpg" (load)="photoLoaded = true" class="img-mobile">
+
+<mat-progress-bar *ngIf="!photoLoaded" mode="indeterminate"></mat-progress-bar>
+
+<div [hidden]="!photoLoaded">
+    <img src="../../assets/schedule24.jpg" (load)="photoLoaded = true" class="img-mobile">
     <app-footer></app-footer>
 </div>

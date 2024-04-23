@@ -25,8 +25,11 @@ export class AppComponent implements OnInit {
    ["Menu Ristorazione", env.routesPath.catering],
    ["Sponsors", env.routesPath.sponsors]
   */
+
+   /* Icons database: https://fonts.google.com/icons */
   public mnRoutes: Map<string, SingleRoute> = new Map<string, SingleRoute>([
       ["Home & Mappa", new SingleRoute(env.routesPath.home,    'home')],
+      ["Programma",    new SingleRoute(env.routesPath.program, 'today')],
       ["Lotteria",     new SingleRoute(env.routesPath.lottery, 'confirmation_number')],
       ["Galleria",     new SingleRoute(env.routesPath.gallery, 'photo')]
   ]);
