@@ -6,17 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-  public showImage: boolean = false;
-  public tenclick: number = 15;
 
-  SHOW(){
-    if(this.tenclick==0){
-      this.showImage=true;
-    }
-  }
-
+  public showEasterEggImage: boolean = false;
+  public remainingClicks: number = 15;
+  
   toggleImage() {
-    this.tenclick = this.tenclick -1;
-    this.SHOW();
+    this.remainingClicks = this.remainingClicks -1;
+    if(this.remainingClicks==0) this.showEasterEggImage = true;
   }
 }
