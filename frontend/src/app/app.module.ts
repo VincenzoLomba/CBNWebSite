@@ -55,7 +55,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(appRoutes, { useHash: true, onSameUrlNavigation: 'reload'}),
+    RouterModule.forRoot(appRoutes, { useHash: true, onSameUrlNavigation: 'reload', scrollPositionRestoration: 'enabled'}),
     FlexLayoutModule,
     MatSidenavModule,
     MatToolbarModule,
