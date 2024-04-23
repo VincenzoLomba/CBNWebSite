@@ -156,21 +156,16 @@ export class DataService {
     `;
     return response.split('\n').filter(el => el.trim() != '').map(p => new Prize(null, p.trim()));
   }
-
 }
 
 class Rule {
-
   name: string;
   body: string;
-
   constructor(name: string, body: string) { this.name = name; this.body = body; }
 }
 
 export class Prize {
-
   winningNumber: string | null;
   name: string;
-
   constructor(winningNumber: string | null, name: string) { this.winningNumber = winningNumber; this.name = name; }
 }
