@@ -8,4 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class ProgramComponent{
 
   photoLoaded: boolean = false;
+
+  ngAfterViewInit() {
+    let top = document.getElementById('webtop');
+    if (top !== null) top.scrollIntoView();
+  }
 }

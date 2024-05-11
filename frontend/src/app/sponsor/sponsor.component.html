@@ -1,7 +1,12 @@
 <mat-progress-bar *ngIf="sponsorsAreLoading()" mode="indeterminate"></mat-progress-bar>
-<br><br>
-<div style="text-align: center;" [hidden]="sponsorsAreLoading()">
-    <h1 class="title">SPONSORS<br>CBN 2023</h1>
+<div style="text-align: center" [hidden]="sponsorsAreLoading()">
+    <div>
+        <div class="home-image">
+            <div class="home-black" [style.background]="'rgba(0, 0, 0, ' + 0.42 + ')'">
+                <h1 style="padding: 26px 20px 20px 20px">SPONSORS<br>CBN 2024</h1>
+            </div>
+        </div>
+    </div>
     <br><br>
     <div *ngFor="let sponsor of getSponsors()">
         <a href="{{sponsor.url}}">
@@ -9,4 +14,6 @@
         </a>
         <br>
     </div>
+    <br>
+    <app-footer></app-footer>
 </div>

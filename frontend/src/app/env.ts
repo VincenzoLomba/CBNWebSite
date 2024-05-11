@@ -8,6 +8,7 @@ export const env = {
         catering: 'ristorazione',
         sport: 'sport',
         gallery: 'gallery',
+        dice: 'dice',
         cbnredirect: 'cbnredirect'
     }
 };

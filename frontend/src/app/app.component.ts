@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { env } from './env';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -7,7 +7,6 @@ import { Router } from '@angular/router';
 
 const dataStructure = new Map();
 
-console.log(dataStructure);
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -24,14 +23,16 @@ export class AppComponent implements OnInit {
    ["CBN Half Court", env.routesPath.sport],
    ["Menu Ristorazione", env.routesPath.catering],
    ["Sponsors", env.routesPath.sponsors]
+  ["Galleria", new SingleRoute(env.routesPath.gallery, 'photo')]
   */
 
    /* Icons database: https://fonts.google.com/icons */
   public mnRoutes: Map<string, SingleRoute> = new Map<string, SingleRoute>([
       ["Home & Mappa", new SingleRoute(env.routesPath.home,    'home')],
       ["Programma",    new SingleRoute(env.routesPath.program, 'today')],
+      ["Menù",    new SingleRoute(env.routesPath.catering, 'lunch_dining')],
       ["Lotteria",     new SingleRoute(env.routesPath.lottery, 'confirmation_number')],
-      ["Galleria",     new SingleRoute(env.routesPath.gallery, 'photo')]
+      ["Sponsors",     new SingleRoute(env.routesPath.sponsors, 'sensor_occupied')]
   ]);
   public mnIcons: Map<string, string> = new Map<string, string>([
     [env.routesPath.home, 'home'],

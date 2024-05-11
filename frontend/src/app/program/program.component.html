@@ -2,6 +2,13 @@
 <mat-progress-bar *ngIf="!photoLoaded" mode="indeterminate"></mat-progress-bar>
 
 <div [hidden]="!photoLoaded">
+    <div>
+        <div class="home-image">
+            <div class="home-black" [style.background]="'rgba(0, 0, 0, ' + 0.42 + ')'">
+                <h1 style="padding: 26px 20px 20px 20px">PROGRAMMA<br>CBN 2024</h1>
+            </div>
+        </div>
+    </div>
     <img src="../../assets/schedule24.jpg" (load)="photoLoaded = true" class="img-mobile">
-    <app-footer></app-footer>
+    <app-footer [patronages]="true"></app-footer>
 </div>

@@ -1,9 +1,5 @@
 <mat-progress-bar *ngIf="!menuLoaded" mode="indeterminate"></mat-progress-bar>
 <div [hidden]="!menuLoaded">
-    <div style="background-color: #fef0d3; height: 16px;"></div>
-    <div style="background-color: #fef0d3">
-        <img src="../../assets/menu.jpg" (load)="menuLoaded = true">
-    </div>
-    <div style="background-color: #fef0d3; height: 14px;"></div>
+    <img src="../../assets/menu.jpg" (load)="menuLoaded = true">
     <app-footer></app-footer>
 </div>

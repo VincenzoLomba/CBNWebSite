@@ -6,18 +6,18 @@
         <a href="https://www.facebook.com/CampusByNight"><img src="../assets/facebook.png" style="width: 55px; height: 55px; margin: 0px 8px;"></a>
         <a href="https://www.youtube.com/c/CampusbyNight"><img src="../assets/youtube.png" style="width: 55px; height: 55px; margin: 0px 8px;"></a>
     </div>
-
-    <!-- This portion of code is relative to patronages
-
-    <p style="font-size: 22px;">Con il patrocinio di</p>
-    <div class="footerContainer">
-        <a href="https://www.unibo.it/it"><img src="../assets/unibo.png" style="height: 55px; margin: 0px 8px;"></a>
-        <a href="https://www.comune.bologna.it/"><img src="../assets/bologna.png" style="height: 55px; margin: 0px 8px;"></a>
+    
+    <div *ngIf="withPatronages()">
+        <br><br>
+        <h2 style="font-size: 22px; letter-spacing: 0.4px">Con il patrocinio di</h2>
+        <div class="footerContainer">
+            <a href="https://www.unibo.it/it"><img src="../assets/unibo.png" style="height: 55px; margin: 0px 8px;"></a>
+            <a href="https://www.comune.bologna.it/"><img src="../assets/bologna.png" style="height: 55px; margin: 0px 8px;"></a>
+        </div>
+        <div class="footerContainer">
+            <a href="https://www.volabo.it/"><img src="../assets/volabo.png" style="height: 55px; margin: 10px 8px 0px 8px;"></a>
+        </div>
     </div>
-    <div class="footerContainer">
-        <a href="https://www.volabo.it/"><img src="../assets/volabo.png" style="height: 55px; margin: 10px 8px 0px 8px;"></a>
-    </div>
-    -->
 
     <hr style="border-top: 0px solid #091d8bcf; background-color:#1529856a; border-color: #b6bbbb25; margin: 44px 8px 0px 8px">
     <h2 (click)="toggleImage()" style="color:#ffffff6e; margin: 20px 20px 20px 20px; font-family: Helvetica ;font-style: italic; font-size: 13pt;" >

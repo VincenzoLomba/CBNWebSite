@@ -1,14 +1,41 @@
-.title {
-    margin: 12px 20px 0px 20px;
-    font-family: Champion;
+
+.home-image {
+    
+    text-align: center;
+    background-image: url("/assets/background24.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-black {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    line-height: 1.2;
+    // text-align: center;
+    // margin-top: 22.78px;
+    // margin-bottom: 100px;
+    font-family: Aesthetic;
     letter-spacing: 2px;
     font-size: 34px;
-    color: #de643f;
-    line-height: 1.2;
+    color: white; //#de643f;
+    /*
     text-shadow:
         -1px 0px 0px black,
         1px 0px 0px black,
         0px -1px 0px black,
         0px 1px 0px black
     ;
+    */
 }

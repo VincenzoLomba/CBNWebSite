@@ -25,8 +25,8 @@ export class DataService {
       e ai cittadini di Bologna ciò che ci appassiona
       e ci affascina della vita e dello studio.<br>
       Ormai giunto alla sua XXII edizione,
-      quest’anno il CBN avrà come titolo “` + this.getSlogan() + `“ e si svolgerà dal 9 all'11 maggio presso <b>Piazza Scaravilli</b> e dintorni,
-      nel cuore della zona universitaria bolognese.`
+      quest’anno il CBN avrà come titolo “` + this.getSlogan() + `“ e si svolgerà dal 9 all'11 maggio presso <b>Piazza San Domenico</b>.` // e dintorni,
+      // nel cuore della zona universitaria bolognese.
     ;
   }
 
@@ -76,82 +76,76 @@ export class DataService {
   getPrizes(): Array<Prize> {
     let response = `
     Scooter Kymco Agility 125cc
-    MacBook Air 13
+    MacBook Air 13’’ con chip Apple M1, 8 GB di RAM e 256 GB di SSD
     Soggiorno di una settimana @Castellammare del Golfo (TP)
     Soggiorno di due notti (15-17/06) con colazione @Agriturismo tenuta il Cicalino, Massa Marittima (GR)
-    Credito dal valore di 300€ per noleggio autoveicoli @corrente
+    Credito dal valore di 300€ per noleggio autoveicoli @Corrente
     Buono da 300€ spendibile per abito da cerimonia @Tosca spose
     Tre anelli in argento fatti a mano, collezione ad-honorem offerti da @Beg oreficieria
-    Abbonamento di 6 mesi in palestra offerto da @sinergy
+    Abbonamento di 6 mesi in palestra offerto da @Sinergy
     Casco integrale HJC offerto da @Guelfa 76
     Soggiorno di due notti presso "Locanda Alfieri", Termoli
     Tre anelli in argento fatti a mano, collezione di Bologna offerti da @Beg oreficieria
-    Prosciutto crudo di Parma azienda fratelli Beretta
     Buono di 140 euro spendibile presso Stabilimenti Balneari Le Spiagge (Rimini)
     Cena per due presso ristorante Gradale del Castello Monterone (Perugia)
     Carnet di 11 ingressi gratuiti presso Hyperspace (Bologna)
-    Box di vini offerto da Azienda Agricola Tre Monti
-    Box di vini offerto da Azienda Agricola Tre Monti
-    Due ingressi omaggio presso Puppy Yoga
     Tre ingressi omaggio presso Acquario di Genova
-    Due ingressi spa per due persone presso Le Rose Suite hotel di Rimini
+    Due ingressi spa per due persone presso Le Rose Suite hotel (Rimini)
     Cena per due presso agriturismo "Orto di Mari" (Imola)
     Buono per ombrellone e lettini per quattro giorni presso Bagno Cesare 66 (Riccione)
-    Ingresso omaggio per dieci persone presso Fiabilandia
-    Set collant Trasparenze da donna offerto da "Nuova Virgiliana"
+    Due box di vini offerti da cantina Paltrinieri
+    Voucher da 70€ di degustazione per due presso "Azienda agricola Palazzo di Varignana" 
     Kit Setern (tonico e siero viso) offerto da Terme San Petronio
-    Voucher da 70€ di degustazione per due presso "Azienda agricola Palazzo di Varignana"
     Kit Vitabir (latte detergente e siero viso) offerto da Terme San Petronio
-    Portafoglio offerto da Pelletteria Campora con set di cinture abbinato
-    Portafoglio offerto da Pelletteria Campora con set di cinture abbinato
-    Portafoglio offerto da Pelletteria Campora con set di cinture abbinato
     Escursione equestre per due persone presso "Centro Ippico Cavallo Maremma ASD" (Massa Marittima)
-    Box di vini offerti da cantina Paltrinieri
-    Box di vini offerti da cantina Paltrinieri
-    Aperitivo-degustazione per due presso Azienda Frontali
-    Box di 6 vini offerto da VignaLucis
-    Cesta di prodotti agricoli offerti da "Gruppo Grifo Agroalimentare"
-    Cesta di prodotti agricoli offerti da "Gruppo Grifo Agroalimentare"
-    Cesta di prodotti agricoli offerti da "Gruppo Grifo Agroalimentare"
+    Aperitivo-degustazione per due presso Azienda Frontali (Rimini)
+    Set collant Trasparenze da donna offerto da "Nuova Virgiliana"
+    Box di 6 vini offerto da VignaEnaoli
+    Cesta di prodotti agricoli offerti da "Gruppo Grifo Agroalimentare" 
+    Cesta di prodotti agricoli offerti da "Gruppo Grifo Agroalimentare" 
+    Portafoglio offerto da Pelletteria Campora con set di cinture abbinato 
+    Portafoglio offerto da Pelletteria Campora con set di cinture abbinato 
+    Portafoglio offerto da Pelletteria Campora con set di cinture abbinato 
     Kit di saponi e make up offerto da Farmacia Dal Contavalli
     Kit di saponi e make up offerto da Farmacia Dal Contavalli
     Kit di saponi e make up offerto da Farmacia Dal Contavalli
-    Credito dal valore di 50€ spendibile presso Spiller
-    Credito dal valore di 50€ presso libreria Tinarelli
+    Credito dal valore di 50€ spendibile presso Spiller (Bologna)
+    Credito dal valore di 50€ presso libreria Tinarelli (Bologna)
     Credito spendibile di 50€ per noleggio autoveicoli @Corrente
-    Credito spendibile di 50€ di workshop presso "Mastri Cartai e dintorni"
+    Credito spendibile di 50€ di workshop presso "Mastri Cartai e Dintorni" (Bologna)
     Kit di dermocosmesi offerta da Terme San Petronio
-    Tre pasti gratuiti a fronte di almeno un pagante presso Yomi Sushi
-    Due salami da Luca Carni
+    Tre pasti gratuiti a fronte di almeno un pagante presso Yomi Sushi (Bologna)
+    Due salami da Luca Carni (Rimini)
     Dieci colazioni omaggio presso Caffè dei Orefici (Bologna)
-    Tre barattoli di miele offerti da Azienda Agricola Scurti
+    Tre barattoli di miele offerti da  Azienda Agricola Scurti
     Due ingressi omaggio validi per l'intero complesso del Museo Nazionale Dell'Automobile
-    Crediti di 30€ spendibili presso pizzeria Largo Respighi
-    Due biro offerte da Cartoleria Biagini
+    Visita per due persone presso Perugia sotterranea e presso Museo del Capitolo e della Cattedrale offerto da Isola San Lorenzo
+    Crediti di 30€ spendibili presso pizzeria Largo Respighi (Bologna)
+    Due penne biro offerte da Cartoleria Biagini
     Orecchini fatti a mano da Xii BO Original Design Shop
-    Messa in piega presso "Donna Gio' studio" in via Mazzini
+    Messa in piega presso "Donna Gio' studio" in via Mazzini, Bologna
     Brunch del fine settimana offerto da Open Hotel, Rimini
-    Sacchettini di streghette da "Il banco del pane"
-    Sacchettini di streghette da "Il banco del pane"
+    Sacchettini di streghette da "Il Banco Del Pane" (Bologna)
+    Sacchettini di streghette da "Il Banco Del Pane" (Bologna)
     Due biglietti omaggio per partita della squadra Zebre - rugby Parma il 17/05/24
     Una bottiglia di vino offerta da cantina Michele Satta
     Cesta di prodotti offerto da Molino Benini (Ravenna)
-    Aperitivo per due offerto da pasticceria Santo Stefano
-    Aperitivo per due (due calici e due piadine) offerto da BottegAmelia
-    10% di sconto dall'Osteria dell'orsa
+    Aperitivo per due offerto da pasticceria Santo Stefano (Bologna)
+    Aperitivo per due (due calici e due piadine) offerto da BottegAmelia (Bologna)
+    10% di sconto dall'Osteria dell'Orsa (Bologna)
     Ingresso omaggio per giornata co-working, Open Hotel, Rimini
-    Buono per mezzo kilo di gelato offerto da Cremoria Mascarella
-    Buono spesa di 10€ spendibile presso Sumo
+    Buono per mezzo kilo di gelato offerto da Cremeria Mascarella (Bologna)
+    Buono spesa di 10€ spendibile presso Sumo (Bologna)
     50% di sconto per escape room presso "Secret Zone"
-    Eticlò 15% fino al 15 giugno
-    Credito del valore di 10€ presso Alman cicli
+    15% fino al 15 giugno presso Eticlò (Bologna)
+    Credito del valore di 10€ presso Alman cicli (Bologna)
     20% di sconto da La bottega Mi Va (entro 30/06/2024)
-    Buono per degustazione per due di focacce da "La Slerfa Focacceria Genovese"
-    Buono per degustazione per due di focacce da "La Slerfa Focacceria Genovese"
-    Buono per degustazione per due di focacce da "La Slerfa Focacceria Genovese"
-    Tre catenacci da bici
+    Buono per degustazione per due di focacce da "La Slerfa Focacceria Genovese" (Bologna)
+    Buono per degustazione per due di focacce da "La Slerfa Focacceria Genovese" (Bologna)
+    Buono per degustazione per due di focacce da "La Slerfa Focacceria Genovese" (Bologna)
+    Tre catene da bici
     Due spray coloranti per capelli e uno shampoo da parrucchieria
-    Buono spesa di 5€ spendibile da Sumo
+    Buono spesa di 5€ spendibile da Sumo (Bologna)
     Abito offerto da Oxigeno
     `;
     return response.split('\n').filter(el => el.trim() != '').map(p => new Prize(null, p.trim()));

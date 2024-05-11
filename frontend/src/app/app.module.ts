@@ -27,6 +27,7 @@ import { SponsorComponent } from './sponsor/sponsor.component';
 import { SportComponent } from './sport/sport.component';
 import { CateringComponent } from './catering/catering.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { DiceComponent } from './dice/dice.component';
 const appRoutes: Routes = [
   {path: env.routesPath.home, component: HomeComponent},
   {path: env.routesPath.lottery, component: LotteryComponent},
@@ -35,6 +36,7 @@ const appRoutes: Routes = [
   {path: env.routesPath.sport, component: SportComponent},
   {path: env.routesPath.sponsors, component: SponsorComponent},
   {path: env.routesPath.gallery, component: GalleryComponent},
+  {path: env.routesPath.dice, component: DiceComponent},
   {path: env.routesPath.cbnredirect, redirectTo: env.routesPath.lottery},
   {path: env.routesPath.none, redirectTo: env.routesPath.home, pathMatch: 'full'},
   {path: '**', redirectTo: env.routesPath.none}
@@ -50,7 +52,8 @@ const appRoutes: Routes = [
     SponsorComponent,
     SportComponent,
     CateringComponent,
-    GalleryComponent
+    GalleryComponent,
+    DiceComponent
   ],
   imports: [
     BrowserModule,
