@@ -15,10 +15,11 @@ export class SponsorComponent {
     new Sponsor('../assets/sponsors/5.png', 'https://www.agri2000net.com/'),
     new Sponsor('../assets/sponsors/7.png', 'https://www.illumia.it/'),
     new Sponsor('../assets/sponsors/8.png', 'https://lipobank.it/'),
-    new Sponsor('../assets/sponsors/9.png', 'https://nextsw.it/'),
+    new Sponsor('../assets/sponsors/9.png', 'https://www.miticohotel.it/'),
     new Sponsor('../assets/sponsors/10.png', 'https://www.unibeautyestetica.it/'),
     new Sponsor('../assets/sponsors/11.png', 'https://www.reabilita.it/'),
-    new Sponsor('../assets/sponsors/12.png', 'https://www.yomax.it/')
+    new Sponsor('../assets/sponsors/12.png', 'https://www.yomax.it/'),
+    new Sponsor('../assets/sponsors/13.png', 'https://www.nextsw.it')
   ];
 
   ngAfterViewInit() {
