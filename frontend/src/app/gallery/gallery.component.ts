@@ -1,10 +1,13 @@
 
+import { NgFor, NgIf } from '@angular/common';
 import { Component, ElementRef } from '@angular/core';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.scss'],
+  imports: [NgIf, NgFor, FooterComponent]
 })
 export class GalleryComponent {
 

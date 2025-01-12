@@ -1,10 +1,15 @@
 import { Component , OnInit} from '@angular/core';
 import { DataService } from '../services/data.service';
+import { NgFor, NgIf } from '@angular/common';
+import { MatIcon } from '@angular/material/icon';
+import { FooterComponent } from '../footer/footer.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  imports: [NgIf, NgFor, MatIcon, FooterComponent, MatButtonModule]
 })
 export class HomeComponent implements OnInit {
 

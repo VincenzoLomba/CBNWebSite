@@ -1,16 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { env } from './env';
+import { env } from './app.env';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { DataService } from './services/data.service';
-import { Router } from '@angular/router';
-
-const dataStructure = new Map();
-
+import { Router, RouterModule } from '@angular/router';
+import { basicModules } from './services/modules.helper';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  imports: [basicModules(), RouterModule]
 })
 export class AppComponent implements OnInit {
 
@@ -30,7 +29,7 @@ export class AppComponent implements OnInit {
   public mnRoutes: Map<string, SingleRoute> = new Map<string, SingleRoute>([
       ["Home & Mappa", new SingleRoute(env.routesPath.home,    'home')],
       ["Programma",    new SingleRoute(env.routesPath.program, 'today')],
-      ["Menù",    new SingleRoute(env.routesPath.catering, 'lunch_dining')],
+      ["Menù",         new SingleRoute(env.routesPath.catering, 'lunch_dining')],
       ["Lotteria",     new SingleRoute(env.routesPath.lottery, 'confirmation_number')],
       ["Sponsors",     new SingleRoute(env.routesPath.sponsors, 'sensor_occupied')]
   ]);
@@ -54,7 +53,6 @@ export class AppComponent implements OnInit {
   menuRoutes(): Map<string, SingleRoute> { return this.mnRoutes; }
 
   websiteBackgroundColor(): string { return ''; } // { return this.router.url === '/' + env.routesPath.program ? '#fff1d3' : ''; }
-
 }
 
 export class SingleRoute {

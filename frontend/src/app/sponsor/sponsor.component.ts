@@ -1,9 +1,13 @@
+import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
+import { FooterComponent } from '../footer/footer.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @Component({
   selector: 'app-sponsor',
   templateUrl: './sponsor.component.html',
-  styleUrls: ['./sponsor.component.scss']
+  styleUrls: ['./sponsor.component.scss'],
+  imports: [NgIf, NgFor, MatProgressBarModule, FooterComponent]
 })
 export class SponsorComponent {
 
